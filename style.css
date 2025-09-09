@@ -1,0 +1,84 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    background: #f5f7fa; 
+    color: #222; 
+}
+header { 
+    background: #222; 
+    color: #fff; 
+    padding: 40px 0; 
+    text-align: center; 
+}
+header h1 { margin: 0;
+    font-size: 2.5em; 
+}
+header p { 
+    font-size: 1.2em; 
+    margin-top: 10px; 
+}
+nav { 
+    background: #333; 
+    text-align: center;
+}
+nav a { 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 15px 20px; 
+    display: inline-block; 
+}
+a:hover { 
+    background: #444; 
+}
+section { 
+    max-width: 900px; 
+    margin: 40px auto; 
+    background: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07); 
+    padding: 30px; 
+}
+h2 { 
+    color: #1a73e8; 
+    margin-top: 0; 
+}
+.team { 
+    display: flex; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+div .member { 
+    flex: 1 1 200px; 
+    background: #f0f4f8; 
+    border-radius: 6px; 
+    padding: 15px; 
+    text-align: center;
+}
+.contact {
+    display: flex; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    height: 5000px;
+}
+.contacts {
+    flex: 1 1 200px; 
+    background: #f0f4f8; 
+    border-radius: 6px; 
+    padding: 15px; 
+    text-align: center;
+}
+#contact iframe{
+    flex: 1 1 200px; 
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+footer { 
+    background: #222;
+    color: #fff; 
+    text-align: center; 
+    font-size: 0.6em;
+    padding: 20px 0; 
+    margin-top: 40px;
+}
