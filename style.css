@@ -67,7 +67,7 @@ div .member {
     padding: 15px; 
     text-align: center;
 }
-#contact iframe{
+iframe{
     flex: 1 1 200px; 
     width: 100%;
     height: 100%;
