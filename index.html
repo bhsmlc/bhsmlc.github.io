@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BHS ML Club</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; color: #222; }
+        header { background: #222; color: #fff; padding: 40px 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header p { font-size: 1.2em; margin-top: 10px; }
+        nav { background: #333; text-align: center; }
+        nav a { color: #fff; text-decoration: none; padding: 15px 20px; display: inline-block; }
+        nav 
+        a:hover { background: #444; }
+        section { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 30px; }
+        h2 { color: #1a73e8; margin-top: 0; }
+        .team { display: flex; gap: 30px; flex-wrap: wrap; }
+        .member { flex: 1 1 200px; background: #f0f4f8; border-radius: 6px; padding: 15px; text-align: center; }
+        .contact-form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: 0 auto; }
+        .contact-form input, .contact-form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .contact-form button { background: #1a73e8; color: #fff; border: none; padding: 10px; border-radius: 4px; cursor: pointer; }
+        .contact-form button:hover { background: #155ab6; }
+        footer { background: #222; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px; }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>BHS ML Club</h1>
+        <p>Exploring the future of technology together</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to the BHS Machine Learning Club! We are passionate about AI, data science, and building intelligent systems. Our club hosts workshops, talks, and hands-on projects for all skill levels.</p>
+    </section>
+    <section id="events">
+        <h2>Events</h2>
+        <ul>
+            <li>Intro to Machine Learning - Workshop</li>
+            <li>Guest Speaker: AI in Healthcare</li>
+            <li>ML Hackathon</li>
+        </ul>
+    </section>
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="member">
+                <strong>President</strong><br>
+                <span>Name</span>
+            </div>
+            <div class="member">
+                <strong>Vice President</strong><br>
+                <span>Name</span>
+            </div>
+            <div class="member">
+                <strong>Lead Developer</strong><br>
+                <span>Name</span>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        &copy; 2025 BHS Machine Learning Club. All rights reserved.
+    </footer>
 </body>
 </html>
