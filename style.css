@@ -68,9 +68,12 @@ h2 {
     text-align: center;
 }
 iframe{
-    width:100%; 
+    width: 100%;
     padding: 15px; 
     text-align: center;
+}
+#join {
+    height: 600px;
 }
 footer { 
     background: #222;
