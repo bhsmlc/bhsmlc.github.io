@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHS ML Club</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>BHS ML Club</h1>
+        <p>Learn. Build. Predict.</p>
+    </header>
+    <nav>
+        <a id = "home" href = "../index.html">Home</a>
+        <div id = "spacer"></div>
+        <a href="../index.html#about">About</a>
+        <a href="index.html">Events</a>
+        <a href="../resources/index.html">Resources</a>
+        <a href="../index.html#team">Team</a>
+        <a href="../index.html#join">Join Us</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
+    <nav id = "dropdown">
+        <div id = "future">
+            Future Events
+        </div>
+        <div id = "past">
+            Past Events
+        </div>
+    </nav>
+    
+    <div id = "futureEventList">
+        <article class = "event">
+            <h3 class = "events">Next Meeting</h3>
+            <p><strong>Tuesday, October 14</strong></p>
+            <p><strong>During Lunch in Room 1325</strong></p>
+            <ul>
+                <h4 class = "events">Agenda/Schedule:</h4>
+                <li>Details coming soon</li>
+            </ul>
+        </article>
+    </div>
+    <div id = "pastEventList">
+        <article class = "event">
+            <h3 class = "events">First Meeting</h3>
+            <p><strong>Tuesday, September 16</strong></p>
+            <h4 class = "events">What we did:</h4>
+            <ul>
+                <li>Introductions</li>
+                <li>Icebreaker: Pictionary</li>
+            </ul>
+        </article>
+        <article class = "event">
+            <h3 class = "events">Second Meeting</h3>
+            <p><strong>Tuesday, September 30</strong></p>
+            <h4 class = "events">What we did:</h4>
+            <ul>
+                <li>Linear Regression Lecture</li>
+                <li>Implementing Linear Regression: Hands-on demo in python</li>
+                <p><strong>Resources: <a href = "../resources/index.html#lrnotebook">Linear Regression Notebook</a></strong></p>
+            </ul>
+        </article>
+    </div>
+    <div id = "gap"></div>
+    <footer>
+        &copy; 2025 BHS Machine Learning Club. All rights reserved.
+    </footer>
+    <script>
+    const futureBtn = document.getElementById("future");
+    const pastBtn = document.getElementById("past");
+    const futureEvents = document.getElementById("futureEventList");
+    const pastEvents = document.getElementById("pastEventList");
+
+    futureEvents.style.display = "none";
+    pastEvents.style.display = "none";
+
+    futureBtn.addEventListener("click", () => {
+    futureEvents.style.display = "block";
+    pastEvents.style.display = "none";
+    futureBtn.classList.add("active");
+    pastBtn.classList.remove("active");
+    });
+
+    pastBtn.addEventListener("click", () => {
+    futureEvents.style.display = "none";
+    pastEvents.style.display = "block";
+    futureBtn.classList.remove("active");
+    pastBtn.classList.add("active");
+    });
+    </script>
+</body>
+</html>
