@@ -42,14 +42,18 @@ nav a {
     text-decoration: none; 
     padding: 15px 20px; 
     display: inline-block; 
-    width: 10vw;
     font-size: 20px;
 }
 @media screen and (max-width: 767)  {
     nav a { 
-    font-size: 14px;
-    width: 13vw;
+    font-size: 8px;
+    flex-basis: 10px;
+    height: 20px;
+    padding: 0px, 0px; 
 }
+    nav {
+        height: 20px;
+    }
 }
 #dropdown {
     display: flex;
