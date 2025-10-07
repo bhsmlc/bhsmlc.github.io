@@ -41,9 +41,11 @@ nav a {
     color: #fff; 
     text-decoration: none; 
     padding: 15px 20px; 
-    display: inline-block; 
+    display: flex; 
     font-size: 20px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 @media screen and (max-width: 767px)  {
     nav a { 
