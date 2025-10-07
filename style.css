@@ -47,13 +47,13 @@ nav a {
 }
 @media screen and (max-width: 767px)  {
     nav a { 
-    font-size: 8px;
+    font-size: 3px;
     flex-basis: 10px;
     height: 30px;
     padding: 0px, 0px; 
     }
     nav {
-        height: 20px;
+        height: 30px;
     }
 }
 #dropdown {
