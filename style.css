@@ -48,6 +48,7 @@ nav a {
 @media screen and (max-width: 767)  {
     nav a { 
     font-size: 14px;
+    width: 13vw;
 }
 }
 #dropdown {
