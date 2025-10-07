@@ -40,9 +40,9 @@ nav #spacer {
 nav a { 
     color: #fff; 
     text-decoration: none; 
-    padding: 2vh 1.5vw; 
+    padding: min(1.5vw, 15px) min(2vw, 20px); 
     display: inline-block; 
-    font-size: 2vw;
+    font-size: min(2.5vw, 30px);
     flex-shrink: 1;
     white-space: nowrap;
 }
