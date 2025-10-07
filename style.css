@@ -50,7 +50,6 @@ nav a {
 @media screen and (max-width: 767px)  {
     nav a { 
     font-size: 10px;
-    flex-basis: 10px;
     height: 20px;
     padding: 0px, 0px; 
     }
