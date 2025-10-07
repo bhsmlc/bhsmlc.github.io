@@ -42,7 +42,7 @@ nav a {
     text-decoration: none; 
     padding: min(1.5vw, 15px) min(2vw, 20px); 
     display: inline-block; 
-    font-size: min(2.5vw, 30px);
+    font-size: min(2.5vw, 19px);
     flex-shrink: 1;
     white-space: nowrap;
 }
