@@ -47,9 +47,9 @@ nav a {
 }
 @media screen and (max-width: 767px)  {
     nav a { 
-    font-size: 800px;
+    font-size: 8px;
     flex-basis: 10px;
-    height: 20px;
+    height: 30px;
     padding: 0px, 0px; 
     }
     nav {
