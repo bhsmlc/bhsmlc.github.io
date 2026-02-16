@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHS ML Club - Learn. Build. Predict.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #F0F7FF;
+            --text-primary: #0F1419;
+            --text-secondary: #4A5568;
+            --accent: #4A90E2;
+            --accent-hover: #357ABD;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --border: rgba(74, 144, 226, 0.15);
+            --shadow: rgba(74, 144, 226, 0.1);
+        }
+
+        body.dark-mode {
+            --bg-primary: #0F1419;
+            --bg-secondary: #1A1F26;
+            --text-primary: #E8F4FF;
+            --text-secondary: #94A3B8;
+            --card-bg: rgba(31, 41, 55, 0.8);
+            --border: rgba(74, 144, 226, 0.2);
+            --shadow: rgba(74, 144, 226, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 20px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-svg {
+            width: 45px;
+            height: 35px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover .logo-svg {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .dark-mode-toggle {
+            background: var(--accent);
+            border: none;
+            color: white;
+            padding: 0.6rem;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .dark-mode-toggle:hover {
+            background: var(--accent-hover);
+            transform: rotate(180deg) scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            opacity: 0.08;
+            top: -300px;
+            right: -300px;
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            opacity: 0.06;
+            bottom: -200px;
+            left: -200px;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.08; }
+            50% { transform: scale(1.15); opacity: 0.12; }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 2rem;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            width: 280px;
+            height: 200px;
+            margin: 0 auto 2.5rem;
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px var(--shadow);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+        }
+
+        .hero-logo:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px var(--shadow);
+        }
+
+        .hero-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #357ABD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.6rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.1rem 2.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(74, 144, 226, 0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .page-header {
+            margin-top: 80px;
+            padding: 5rem 2rem;
+            text-align: center;
+            background: var(--bg-secondary);
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .page-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            color: var(--text-primary);
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.25rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 70px var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent) 0%, #357ABD 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin: 5rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            width: calc(50% - 50px);
+            position: relative;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px var(--shadow);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-date {
+            position: absolute;
+            top: 2rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .timeline-item:nth-child(even) .timeline-date {
+            left: calc(50% + 50px);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-date {
+            right: calc(50% + 50px);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 22px;
+            height: 22px;
+            background: var(--accent);
+            border: 5px solid var(--bg-primary);
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px var(--shadow);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Resources */
+        .resource-category {
+            margin-bottom: 4rem;
+        }
+
+        .resource-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        .resource-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 40px var(--shadow);
+        }
+
+        .resource-badge {
+            display: inline-block;
+            padding: 0.35rem 0.9rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge-beginner {
+            background: #10B981;
+            color: white;
+        }
+
+        .badge-intermediate {
+            background: #F59E0B;
+            color: white;
+        }
+
+        .badge-advanced {
+            background: #EF4444;
+            color: white;
+        }
+
+        .resource-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .resource-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--card-bg);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px var(--shadow);
+        }
+
+        .team-avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, #357ABD 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+            font-weight: 800;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .team-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .team-role {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 55px;
+            height: 55px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .social-links a:hover {
+            background: var(--accent-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+
+            .page-title {
+                font-size: 2.25rem;
+            }
+
+            .tagline {
+                font-size: 1.25rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 60px !important;
+            }
+
+            .timeline-date {
+                left: -80px !important;
+                right: auto !important;
+                top: 0 !important;
+            }
+
+            .timeline-dot {
+                left: 20px;
+                transform: none;
+            }
+
+            .hero-logo {
+                width: 220px;
+                height: 160px;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .logo-svg {
+                width: 35px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="showPage('home')">
+                <svg class="logo-svg" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Brain outline left hemisphere -->
+                    <path d="M 40 70 Q 40 25 65 25 Q 80 25 90 35 Q 85 45 85 55 Q 85 70 75 80 Q 65 90 50 95 Q 40 90 40 70 Z" 
+                          fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                    <!-- Brain outline right hemisphere -->
+                    <path d="M 160 70 Q 160 25 135 25 Q 120 25 110 35 Q 115 45 115 55 Q 115 70 125 80 Q 135 90 150 95 Q 160 90 160 70 Z" 
+                          fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                    <!-- Center divider -->
+                    <line x1="100" y1="28" x2="100" y2="92" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                    <!-- M letter -->
+                    <path d="M 55 75 L 55 48 L 70 60 L 85 48 L 85 75" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- L letter -->
+                    <path d="M 115 48 L 115 75 L 135 75" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Circuit nodes -->
+                    <circle cx="55" cy="35" r="5.5" fill="#4A90E2"/>
+                    <circle cx="75" cy="30" r="5.5" fill="#4A90E2"/>
+                    <circle cx="115" cy="30" r="5.5" fill="#4A90E2"/>
+                    <circle cx="145" cy="35" r="5.5" fill="#4A90E2"/>
+                    <circle cx="45" cy="82" r="5.5" fill="#4A90E2"/>
+                    <circle cx="70" cy="92" r="5.5" fill="#4A90E2"/>
+                    <circle cx="105" cy="88" r="5.5" fill="#4A90E2"/>
+                    <circle cx="130" cy="92" r="5.5" fill="#4A90E2"/>
+                    <circle cx="155" cy="82" r="5.5" fill="#4A90E2"/>
+                </svg>
+                BHS ML Club
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="showPage('home')" class="nav-link active">Home</a></li>
+                <li><a onclick="showPage('events')" class="nav-link">Events</a></li>
+                <li><a onclick="showPage('resources')" class="nav-link">Resources</a></li>
+                <li><a onclick="showPage('team')" class="nav-link">Team</a></li>
+                <li>
+                    <button class="dark-mode-toggle" id="darkModeToggle">
+                        <i data-lucide="moon" id="modeIcon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-logo">
+                    <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Brain outline left hemisphere -->
+                        <path d="M 40 70 Q 40 25 65 25 Q 80 25 90 35 Q 85 45 85 55 Q 85 70 75 80 Q 65 90 50 95 Q 40 90 40 70 Z" 
+                              fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                        <!-- Brain outline right hemisphere -->
+                        <path d="M 160 70 Q 160 25 135 25 Q 120 25 110 35 Q 115 45 115 55 Q 115 70 125 80 Q 135 90 150 95 Q 160 90 160 70 Z" 
+                              fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                        <!-- Center divider -->
+                        <line x1="100" y1="28" x2="100" y2="92" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                        <!-- M letter -->
+                        <path d="M 55 75 L 55 48 L 70 60 L 85 48 L 85 75" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- L letter -->
+                        <path d="M 115 48 L 115 75 L 135 75" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Circuit nodes -->
+                        <circle cx="55" cy="35" r="5.5" fill="#4A90E2"/>
+                        <circle cx="75" cy="30" r="5.5" fill="#4A90E2"/>
+                        <circle cx="115" cy="30" r="5.5" fill="#4A90E2"/>
+                        <circle cx="145" cy="35" r="5.5" fill="#4A90E2"/>
+                        <circle cx="45" cy="82" r="5.5" fill="#4A90E2"/>
+                        <circle cx="70" cy="92" r="5.5" fill="#4A90E2"/>
+                        <circle cx="105" cy="88" r="5.5" fill="#4A90E2"/>
+                        <circle cx="130" cy="92" r="5.5" fill="#4A90E2"/>
+                        <circle cx="155" cy="82" r="5.5" fill="#4A90E2"/>
+                        <!-- Connection lines (subtle) -->
+                        <line x1="55" y1="35" x2="55" y2="48" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                        <line x1="75" y1="30" x2="70" y2="42" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                        <line x1="115" y1="30" x2="115" y2="48" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                        <line x1="145" y1="35" x2="135" y2="48" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                        <line x1="45" y1="82" x2="55" y2="75" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                        <line x1="70" y1="92" x2="70" y2="75" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                        <line x1="130" y1="92" x2="125" y2="75" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                        <line x1="155" y1="82" x2="135" y2="75" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+                    </svg>
+                </div>
+                <h1>BHS ML Club</h1>
+                <p class="tagline">Learn. Build. Predict.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:mlclubbhs@gmail.com" class="btn btn-primary">
+                        Join the Club
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a onclick="showPage('events')" class="btn btn-secondary">
+                        View Events
+                        <i data-lucide="calendar"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title" data-aos="fade-up">What We Do</h2>
+            <div class="cards-grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3>Learn AI/ML</h3>
+                    <p>Explore machine learning concepts, neural networks, and AI fundamentals through hands-on workshops and guided tutorials.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3>Build Projects</h3>
+                    <p>Create real-world applications using Python, TensorFlow, and popular ML frameworks. From chatbots to image recognition!</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i data-lucide="trophy"></i>
+                    </div>
+                    <h3>Compete & Grow</h3>
+                    <p>Participate in mini-hackathons, Kaggle competitions, and showcase your projects at school events.</p>
+                </div>
+            </div>
+
+            <div class="stats" data-aos="fade-up">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Active Members</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2x</span>
+                    <span class="stat-label">Meetings/Month</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Beginner Friendly</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- EVENTS PAGE -->
+    <div id="events" class="page">
+        <div class="page-header">
+            <h1 class="page-title" data-aos="fade-up">Events & Meetings</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Stay updated with our upcoming workshops, hackathons, and club activities</p>
+        </div>
+
+        <section class="container">
+            <h2 class="section-title" data-aos="fade-up">Upcoming Events</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 15, 2025</div>
+                    <div class="timeline-content">
+                        <h3>🚀 Spring Semester Kickoff</h3>
+                        <p><strong>Time:</strong> Lunch (12:00 PM - 12:45 PM)</p>
+                        <p><strong>Location:</strong> Room 204</p>
+                        <p>Join us for our first meeting of the semester! We'll introduce new members, discuss project ideas, and plan our roadmap for the year.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 29, 2025</div>
+                    <div class="timeline-content">
+                        <h3>🧠 Intro to Neural Networks</h3>
+                        <p><strong>Time:</strong> Lunch</p>
+                        <p><strong>Location:</strong> Room 204</p>
+                        <p>Hands-on workshop covering the basics of neural networks. Bring your laptop! We'll build a simple image classifier from scratch.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 12, 2025</div>
+                    <div class="timeline-content">
+                        <h3>💻 Mini Hackathon</h3>
+                        <p><strong>Time:</strong> After School (3:00 PM - 6:00 PM)</p>
+                        <p><strong>Location:</strong> Computer Lab</p>
+                        <p>Team up and build an AI project in 3 hours! Prizes for best projects. Pizza provided!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 26, 2025</div>
+                    <div class="timeline-content">
+                        <h3>🎯 Guest Speaker: ML Engineer</h3>
+                        <p><strong>Time:</strong> Lunch</p>
+                        <p><strong>Location:</strong> Room 204</p>
+                        <p>Learn about real-world ML applications from a professional engineer. Q&A session included!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;" data-aos="fade-up">
+                <a href="mailto:mlclubbhs@gmail.com" class="btn btn-primary">
+                    <i data-lucide="bell"></i>
+                    Get Event Notifications
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- RESOURCES PAGE -->
+    <div id="resources" class="page">
+        <div class="page-header">
+            <h1 class="page-title" data-aos="fade-up">Learning Resources</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Curated materials to help you master machine learning</p>
+        </div>
+
+        <section class="container">
+            <div class="resource-category" data-aos="fade-up">
+                <h2 class="section-title">🎓 Online Courses</h2>
+                <div class="resource-items">
+                    <div class="resource-item">
+                        <span class="resource-badge badge-beginner">Beginner</span>
+                        <h3>Machine Learning by Andrew Ng</h3>
+                        <p>The classic introduction to ML. Perfect for complete beginners.</p>
+                        <p style="color: var(--accent); margin-top: 1rem; font-weight: 600;">📍 Coursera</p>
+                    </div>
+                    <div class="resource-item">
+                        <span class="resource-badge badge-beginner">Beginner</span>
+                        <h3>Python for Everybody</h3>
+                        <p>Learn Python basics before diving into ML.</p>
+                        <p style="color: var(--accent); margin-top: 1rem; font-weight: 600;">📍 Coursera / FreeCodeCamp</p>
+                    </div>
+                    <div class="resource-item">
+                        <span class="resource-badge badge-intermediate">Intermediate</span>
+                        <h3>Fast.ai Deep Learning</h3>
+                        <p>Practical deep learning for coders. Hands-on approach.</p>
+                        <p style="color: var(--accent); margin-top: 1rem; font-weight: 600;">📍 fast.ai</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-category" data-aos="fade-up">
+                <h2 class="section-title">📚 Books & Documentation</h2>
+                <div class="resource-items">
+                    <div class="resource-item">
+                        <span class="resource-badge badge-beginner">Beginner</span>
+                        <h3>Hands-On Machine Learning</h3>
+                        <p>By Aurélien Géron. Comprehensive guide with practical examples.</p>
+                    </div>
+                    <div class="resource-item">
+                        <span class="resource-badge badge-intermediate">Intermediate</span>
+                        <h3>Deep Learning Book</h3>
+                        <p>By Goodfellow, Bengio & Courville. The deep learning bible.</p>
+                    </div>
+                    <div class="resource-item">
+                        <span class="resource-badge badge-beginner">Beginner</span>
+                        <h3>Scikit-learn Documentation</h3>
+                        <p>Official docs for the most popular ML library in Python.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-category" data-aos="fade-up">
+                <h2 class="section-title">🛠️ Tools & Platforms</h2>
+                <div class="resource-items">
+                    <div class="resource-item">
+                        <span class="resource-badge badge-beginner">Beginner</span>
+                        <h3>Google Colab</h3>
+                        <p>Free cloud-based Jupyter notebooks with GPU access.</p>
+                    </div>
+                    <div class="resource-item">
+                        <span class="resource-badge badge-intermediate">Intermediate</span>
+                        <h3>Kaggle</h3>
+                        <p>Datasets, competitions, and notebooks to learn from.</p>
+                    </div>
+                    <div class="resource-item">
+                        <span class="resource-badge badge-beginner">Beginner</span>
+                        <h3>Teachable Machine</h3>
+                        <p>Train ML models right in your browser, no code needed!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- TEAM PAGE -->
+    <div id="team" class="page">
+        <div class="page-header">
+            <h1 class="page-title" data-aos="fade-up">Our Team</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">Meet the people making BHS ML Club possible</p>
+        </div>
+
+        <section class="container">
+            <h2 class="section-title" data-aos="fade-up">Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar">A</div>
+                    <div class="team-name">Ashwath Arasuraj Sankar</div>
+                    <div class="team-role">President</div>
+                    <p class="team-bio">Passionate about making AI accessible to everyone. Specializes in computer vision and NLP projects.</p>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar">A</div>
+                    <div class="team-name">Arnav Arise</div>
+                    <div class="team-role">Co-President</div>
+                    <p class="team-bio">Loves building ML projects and teaching others. Focuses on reinforcement learning and data science.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;" data-aos="fade-up">
+                <h3 style="margin-bottom: 2rem; font-size: 1.8rem;">Want to join our team?</h3>
+                <a href="mailto:mlclubbhs@gmail.com" class="btn btn-primary">
+                    <i data-lucide="users"></i>
+                    Get Involved
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:mlclubbhs@gmail.com">
+                    <i data-lucide="mail"></i>
+                </a>
+                <a href="#">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="#">
+                    <i data-lucide="instagram"></i>
+                </a>
+            </div>
+            <p style="color: var(--text-secondary);">© 2025 BHS Machine Learning Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Page Navigation
+        function showPage(pageName) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            document.getElementById(pageName).classList.add('active');
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            window.scrollTo(0, 0);
+            
+            setTimeout(() => {
+                AOS.refresh();
+                lucide.createIcons();
+            }, 100);
+        }
+
+        // Dark Mode Toggle
+        const toggle = document.getElementById('darkModeToggle');
+        const modeIcon = document.getElementById('modeIcon');
+        
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            modeIcon.setAttribute('data-lucide', 'sun');
+            lucide.createIcons();
+        }
+
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDark);
+            
+            modeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

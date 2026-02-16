@@ -1,0 +1,105 @@
+[
+    {},
+    {
+        "Tutorials & Guides": [
+            {
+                "icon": "📘",
+                "title": "Scikit-learn",
+                "description": "Machine learning library for Python",
+                "reference": "https://scikit-learn.org/"
+            },
+            {
+                "icon": "🤖",
+                "title": "TensorFlow",
+                "description": "Deep learning framework",
+                "reference": "https://www.tensorflow.org/"
+            },
+            {
+                "icon": "🐼",
+                "title": "Pandas",
+                "description": "Data manipulation library",
+                "reference": "https://pandas.pydata.org/"
+            },
+            {
+                "icon": "🎓",
+                "title": "Kaggle Learn: Python & ML Courses",
+                "description": "Online courses for Python and machine learning",
+                "reference": "https://www.kaggle.com/learn"
+            },
+            {
+                "icon": "📝",
+                "title": "Official Python Basics Notebook",
+                "description": "Club’s Python basics notebook",
+                "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/python_basics_ml.ipynb"
+            }
+        ],
+        "Meeting Slides & Files": [
+            {
+                "icon": "📓",
+                "title": "Linear Regression Notebook",
+                "description": "Notebook from the linear regression meeting",
+                "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/linear_regression.ipynb"
+            },
+            {
+                "icon": "🌳",
+                "title": "Classifying Trees Slides & Notebook",
+                "description": "Slides and notebook on decision trees",
+                "reference": "https://docs.google.com/presentation/d/1mREcDvdA9_eVRbvwmzjc6NQiPsghzeHW/edit?usp=sharing&ouid=114001257580882162089&rtpof=true&sd=true"
+            },
+            {
+                "icon": "🖼️",
+                "title": "Meeting Slides - How Image Recognition Works",
+                "description": "Slides explaining image recognition concepts",
+                "reference": "https://docs.google.com/presentation/d/15_l1Sta-29WuD9jWo4aMS91G_Bb6LLlI/edit?usp=sharing&ouid=114001257580882162089&rtpof=true&sd=true"
+            },
+            {
+                "icon": "📊",
+                "title": "ML Libraries Intro Notebook",
+                "description": "Intro to machine learning libraries in Python",
+                "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/libraries_intro.ipynb"
+            },
+            {
+                "icon": "❓",
+                "title": "Kahoot: download spreadsheet here",
+                "description": "Spreadsheet for Kahoot questions",
+                "reference": "../resources/files/2025_fall-semester1-kahoot.xlsx"
+            },
+            {
+                "icon": "🧠",
+                "title": "Bingo Quiz Python Program",
+                "description": "Python program for bingo quiz",
+                "reference": "https://colab.research.google.com/github/bhsmlc/bhsmlc-resources/blob/main/semester2_review.ipynb"
+            },
+            {
+                "icon": "📽️",
+                "title": "Machine Learning Project Ideas Slideshow",
+                "description": "Slides for semester 2 project selection",
+                "reference": "https://docs.google.com"
+            }
+        ],
+        "Tools & Platforms": [
+            {
+                "icon": "💻",
+                "title": "Online Python Compiler",
+                "description": "Tool for running Python code online",
+                "reference": "https://www.programiz.com/python-programming/online-compiler/"
+            },
+            {
+                "icon": "☁️",
+                "title": "Google Colab",
+                "description": "Cloud Python notebook environment",
+                "reference": "https://colab.research.google.com/"
+            },
+            {
+                "icon": "🐙",
+                "title": "GitHub",
+                "description": "Code hosting platform",
+                "reference": "https://github.com/"
+            }
+        ]
+    }
+]
+
+
+
+

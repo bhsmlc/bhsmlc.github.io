@@ -1,0 +1,98 @@
+{
+    "future": [
+        {
+            "title": "Next Meeting",
+            "date": "Tuesday, January 13 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Introduction; Agenda: TBA",
+            "references": []
+        }
+    ],
+    "past": [
+        {
+            "title": "1st Meeting",
+            "date": "Tuesday, September 16 2025",
+            "location": "During Lunch in Room 1325",
+            "content": "Introductions; Icebreaker: pictionary",
+            "references": []
+        },
+        {
+            "title": "2nd Meeting",
+            "date": "Tuesday, September 30 2025",
+            "location": "During Lunch in Room 1325",
+            "content": "Linear regression lecture; Implementing linear regression: hands-on demo in Python",
+            "references": [
+                "https://github.com/bhsmlc/bhsmlc-resources/blob/main/linear_regression.ipynb"
+            ]
+        },
+        {
+            "title": "3rd Meeting",
+            "date": "Tuesday, October 14 2025",
+            "location": "During Lunch in Room 1325",
+            "content": "Skim through Python basics",
+            "references": [
+                "https://github.com/bhsmlc/bhsmlc-resources/blob/main/python_basics_ml.ipynb"
+            ]
+        },
+        {
+            "title": "4th Meeting",
+            "date": "Tuesday, October 28 2025",
+            "location": "During Lunch in Room 1325",
+            "content": "Basic classifying trees",
+            "references": [
+                "https://docs.google.com/presentation/d/1mREcDvdA9_eVRbvwmzjc6NQiPsghzeHW/edit?usp=sharing&ouid=114001257580882162089&rtpof=true&sd=true"
+            ]
+        },
+        {
+            "title": "5th Meeting",
+            "date": "Thursday, November 13 2025",
+            "location": "During Lunch in Room 1325",
+            "content": "The science behind image recognition",
+            "references": [
+                "https://docs.google.com/presentation/d/15_l1Sta-29WuD9jWo4aMS91G_Bb6LLlI/edit?usp=sharing&ouid=114001257580882162089&rtpof=true&sd=true"
+            ]
+        },
+        {
+            "title": "6th Meeting",
+            "date": "Tuesday, November 25 2025",
+            "location": "During Lunch in Room 1325",
+            "content": "Introductions to ML libraries in Python; Hands-on demo: linear regression",
+            "references": [
+                "https://github.com/bhsmlc/bhsmlc-resources/blob/main/libraries_intro.ipynb"
+            ]
+        },
+        {
+            "title": "7th Meeting",
+            "date": "Tuesday, December 9 2025",
+            "location": "During Lunch in Room 1325",
+            "content": "Semester reflection google forms; Semester review kahoot and bingo",
+            "references": [
+                "../resources/files/2025_fall-semester1-kahoot.xlsx",
+                "https://colab.research.google.com/github/bhsmlc/bhsmlc-resources/blob/main/semester2_review.ipynb"
+            ]
+        },
+        {
+            "title": "8th Meeting",
+            "date": "Tuesday, January 13 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Explore ML Project Ideas; Vote on a project; Semester 2 Project Selection resources",
+            "references": [
+                "https://github.com/bhsmlc/bhsmlc-resources/blob/main/semester2_project_selection.ipynb"
+            ]
+        },
+        {
+            "title": "9th Meeting",
+            "date": "Tuesday, February 3 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Download the MNIST handwritten digits dataset and read through it",
+            "references": []
+        },
+        {
+            "title": "10th Meeting",
+            "date": "Tuesday, February 10 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Visualize the data with Matplotlib",
+            "references": []
+        }
+    ]
+}

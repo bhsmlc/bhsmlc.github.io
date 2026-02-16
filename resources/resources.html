@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset = 'UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="description" content="The website for the Burbank High School Machine Learning Club.">
+        <meta name="author" content="Burbank High School Machine Learning Club">
+        <meta name="keywords" content="Burbank High School, BHS, Burbank High clubs, Machine Learning Club, AI Club, ML Club">
+
+        <link rel="icon" href="/images/dark_logo.svg" type="image/svg+xml">
+
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/resources.css">
+        <link rel="stylesheet" href="/css/hero.css">
+        
+        <title>Resources - BHS ML Club</title>
+
+        <style>
+            main {
+
+            }
+            header nav ul li a#resources-link {
+                color: var(--secondary-color);
+                transition: all 0.2s ease 0s;
+            }
+            header nav ul li a#resources-link::after {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 50%;
+                top: 125%;
+                height: 0.2rem;
+                width: 0;
+                background-color: var(--secondary-color);
+                left: 0;
+                width: 100%;
+                transition: all 0.1s ease 0s;
+            }
+            header nav ul li a#resources-link:hover {
+                color: var(--secondary-dark);
+            }
+            header nav ul li a#resources-link:hover::after {
+                background-color: var(--secondary-dark);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!--Loaded from load_component.js-->
+            </nav>
+            <section id="hero">
+                <div id="hero-content" style="height: 25rem; animation: none;">
+                    <hgroup>
+                        <h1>
+                            <div id="header-line2">Tools and Resources</div>
+                        </h1>
+                        <div id="hero-tagline">Find learning tools, documentations, meetings slides, and more.</div>
+                    </hgroup>
+                </div>
+            </section>
+        </header>
+        <main>
+            <h3>Resources</h3>
+            <section id="highlights">
+
+            </section>
+            <section id="resource-list">
+
+            </section>
+        </main>
+        <footer>
+            <!--Loaded from load_component.js-->
+        </footer>
+
+        <script src="/js/load_component.js">
+        </script>
+        <script>
+            loadComponent("footer", "/includes/footer.html");
+            loadComponent("nav", "/includes/navbar.html");
+        </script>
+        <script src="/js/load_resources.js">
+        </script>
+    </body>
+</html>

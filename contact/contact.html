@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset = 'UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="description" content="The website for the Burbank High School Machine Learning Club.">
+        <meta name="author" content="Burbank High School Machine Learning Club">
+        <meta name="keywords" content="Burbank High School, BHS, Burbank High clubs, Machine Learning Club, AI Club, ML Club">
+
+        <link rel="icon" href="/images/dark_logo.svg" type="image/svg+xml">
+
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/contact-form.css">
+        <link rel="stylesheet" href="/css/hero.css">
+        
+        <title>Contact - BHS ML Club</title>
+
+        <style>
+            header nav ul li a#contact-link {
+                color: var(--secondary-color);
+                transition: all 0.2s ease 0s;
+            }
+            header nav ul li a#contact-link::after {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 50%;
+                top: 125%;
+                height: 0.2rem;
+                width: 0;
+                background-color: var(--secondary-color);
+                left: 0;
+                width: 100%;
+                transition: all 0.1s ease 0s;
+            }
+            header nav ul li a#contact-link:hover {
+                color: var(--secondary-dark);
+            }
+            header nav ul li a#contact-link:hover::after {
+                background-color: var(--secondary-dark);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!--Loaded from load_component.js-->
+            </nav>
+            <section id="hero">
+                <div id="hero-content" style="height: 25rem; animation: none;">
+                    <hgroup>
+                        <h1>
+                            <div id="header-line2">Reach Out</div>
+                        </h1>
+                        <div id="hero-tagline">Questions? Comments? Concerns? Contact us here!</div>
+                    </hgroup>
+                </div>
+            </section>
+        </header>
+        <main>
+            <h3>Get in Touch with Us</h3>
+
+            <form id="contact-form"> <!--novalidate-->
+                <div class="input-group">
+                <label for="name">NAME</label>
+                <input id="name" name="name" placeholder="Name">
+                </div>
+                <div class="input-group">
+                <label for="email">EMAIL</label>
+                <input id="email" type="email" name="email" placeholder="Email" minlength="5">
+                </div>
+                <div class="input-group">
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" placeholder="Message"></textarea>
+                </div>
+                <input id="submit" type="submit">
+            </form>
+       </main>
+       <footer>
+           <!--Loaded from load_component.js-->
+        </footer>
+
+        <script src="/js/load_component.js">
+        </script>
+        <script>
+            loadComponent("footer", "/includes/footer.html");
+            loadComponent("nav", "/includes/navbar.html");
+        </script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script src="/js/contact_form.js" defer>
+        </script>
+    </body>
+</html> 

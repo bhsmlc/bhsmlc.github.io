@@ -1,0 +1,126 @@
+header nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    font-size: 0;
+    box-shadow: 0 2px 4px var(--secondary-shadow);
+}
+
+
+
+header nav ul::before {
+    content: "";
+    display: block;
+    flex-grow: 0.15;
+    max-width: 10%;
+}
+header nav ul {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem 0;
+    background-color: var(--background-color);
+}
+header nav ul::after {
+    content: "";
+    display: block;
+    flex-grow: 0.15;
+    max-width: 10%;
+}
+
+
+
+header nav ul li {
+    position: relative;
+    padding: 0 0.4rem;
+    margin: 0;
+    list-style: none;
+}
+header nav ul li:has(div.nav-logo) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+    transition: all 0.2s ease-in-out 0s;
+}
+header nav ul li:has(div.nav-logo):hover {
+    transform: scale(1.02) translateY(-0.1rem);
+}
+header nav ul li div.nav-logo img {
+    width: 5rem;
+}
+header nav ul li span#logo-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    flex-wrap: wrap;
+}
+header nav ul li div#logo-light {
+    display: inline-block;
+}
+header nav ul li div#logo-dark {
+    display: none;
+}
+header nav ul li:has(div#nav-spacer) {
+    flex-grow: 1;
+    max-width: 50%;
+}
+header nav ul li a {
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+    user-select: none;
+    transition: all 0.2s ease-in-out 0s;
+}
+header nav ul li a:hover{
+    color: var(--secondary-color);
+}
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 125%;
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--secondary-color);
+    transition: all 0.2s ease-in-out 0s;
+}
+header nav ul li a:hover::after {
+    left: 0;
+    width: 100%;
+}
+header nav ul li button#theme-control {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
+    border-radius: 9999rem;
+    background-color: var(--secondary-color);
+    border: 0 solid black;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(.45,.52,.12,.95) 0s;
+}
+header nav ul li button#theme-control:hover {
+    transform: rotateZ(90deg) scale(1.1);
+    background-color: var(--secondary-dark);
+}
+header nav ul li button#theme-control svg#sun {
+    position: absolute;
+    display: inline;
+    width: 90%;
+    transform: translateY(-0.0625rem);
+}
+header nav ul li button#theme-control svg#moon {
+    position: absolute;
+    display: none;
+    height: 60%;
+    padding-right: 0.3rem;;
+}

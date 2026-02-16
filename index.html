@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset = 'UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="description" content="The website for the Burbank High School Machine Learning Club.">
+        <meta name="author" content="Burbank High School Machine Learning Club">
+        <meta name="keywords" content="Burbank High School, BHS, Burbank High clubs, Machine Learning Club, AI Club, ML Club">
+
+        <link rel="icon" href="images/dark_logo.svg" type="image/svg+xml">
+
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/hero.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/intro-cards.css">
+        
+        <title>BHS ML Club</title>
+
+        <style>
+            header nav ul li a#home-link {
+                color: var(--secondary-color);
+                transition: all 0.2s ease 0s;
+            }
+            header nav ul li a#home-link::after {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 50%;
+                top: 125%;
+                height: 0.2rem;
+                width: 0;
+                background-color: var(--secondary-color);
+                left: 0;
+                width: 100%;
+                transition: all 0.1s ease 0s;
+            }
+            header nav ul li a#home-link:hover {
+                color: var(--secondary-dark);
+            }
+            header nav ul li a#home-link:hover::after {
+                background-color: var(--secondary-dark);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!--Loaded from load_component.js-->
+            </nav>
+            <section id="hero">
+                <div id="hero-content">
+                    <img src="/images/light_logo.svg">
+                    <hgroup>
+                        <h1>
+                            <div id="header-line1">Burbank High School</div>
+                            <div id="header-line2">Machine Learning Club</div>
+                        </h1>
+                        <div id="hero-tagline"><p id="tagline-word1">Learn.</p> <p id="tagline-word2">Build.</p> <p id="tagline-word3">Predict.</p></div>
+                    </hgroup>
+                    <section id="button-row">
+                        <a href="https://forms.gle/Xv5aTELevyPTNih89" target="_blank" id="join-hero-button">Become a Member</a>
+                        <a href="/events/events.html" id="complementary-hero-button">Contact Us</a>
+                    </section>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <h3>About Us</h3>
+
+            <div id="do-cards">
+                <section>
+                    A small group of students interested in machine learning and AI.
+                </section>
+                <section>
+                    Learn new concepts, work on projects, and do fun ML related drills/games.
+                </section>
+            </div>
+
+            <div id="project">
+                <div id="project-img"><h4>Mnist Handwritten Digit Detector</h4><img src="project-img"></div>
+                <div id="project-description"><p>This semester, we are working on a handwritten digit predictor project. Here's a look at our progress:</p><a href="">Click Here</a></div>
+            </div>
+
+            <div id="join-reqs">
+                <div>No experience needed.</div>
+                <div>No club dues.</div>
+                <div>Minimal time commitment.</div>
+                <div>Just bring a device and some curiosity.</div>
+            </div>
+
+            
+        </main>
+
+        <div class="spacer"></div>
+        <footer>
+            <!--Loaded from load_component.js-->
+        </footer>
+
+        <script src="js/load_component.js"></script>
+        <script defer>
+            loadComponent("nav", "includes/navbar.html");
+            loadComponent("footer", "includes/footer.html");
+        </script>
+    </body>
+</html>

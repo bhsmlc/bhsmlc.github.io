@@ -1,0 +1,187 @@
+header section#hero {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, var(--secondary-background), var(--background-color));
+    animation: background-in 1s ease-out;
+}
+@keyframes background-in {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+
+header section#hero div#hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50rem;
+    margin: 0 auto;
+    overflow-anchor: none;
+
+    animation: slide-up 1.2s ease-out;
+}
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        top: 25vh;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+
+header section#hero div#hero-content img {
+    width: 15rem;
+    filter: drop-shadow(0 0 10px var(--secondary-dark-shadow));
+    transition: all 0.4s ease-in-out 0s;
+}
+header section#hero div#hero-content img:hover {
+    transform: translateY(-0.3rem);
+}
+header section#hero div#hero-content hgroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+header section#hero div#hero-content hgroup h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+    padding-top: 2rem;
+    margin: 0;
+}
+
+
+
+header section#hero div#hero-content hgroup h1 div#header-line1{
+    font-size: 2rem;
+}
+header section#hero div#hero-content hgroup h1 div#header-line2{
+    font-size: 2.5rem;
+}
+
+
+
+header section#hero div#hero-content hgroup div#hero-tagline {
+    display: flex;
+    gap: 0.6rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--primary-hovor);
+    margin-top: 0.5rem;
+}
+
+
+
+header section#hero div#hero-content hgroup div#hero-tagline p#tagline-word1 {
+    animation: bounce1 3s ease-in 0s infinite;
+}
+header section#hero div#hero-content hgroup div#hero-tagline p#tagline-word2 {
+    animation: bounce2 3s ease-in 0s infinite;
+}
+header section#hero div#hero-content hgroup div#hero-tagline p#tagline-word3 {
+    animation: bounce3 3s ease-in 0s infinite;
+}
+@keyframes bounce1 {
+    0%, 33% {
+        transform: scale(1);
+    }
+    16% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes bounce2 {
+    0% {
+        transform: scale(1);
+    }
+    33%, 66% {
+        transform: scale(1);
+    }
+    49% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes bounce3 {
+    0% {
+        transform: scale(1);
+    }
+    66%, 100% {
+        transform: scale(1);
+    }
+    84% {
+        transform: scale(1.05);
+    }
+}
+
+
+header section#hero div#hero-content section#button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header section#hero div#hero-content section#button-row > * {
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    width: 12.5rem;
+    height: 4rem;
+    margin: 1rem 0.5rem;
+    border-radius: 9999rem;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: none;
+}
+header section#hero div#hero-content section#button-row a#join-hero-button {
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: all 0.15s ease-in 0s;
+}
+header section#hero div#hero-content section#button-row a#join-hero-button:hover {
+    color: var(--background-color);
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+    transform: translateY(-0.1rem);
+}
+header section#hero div#hero-content section#button-row a#complementary-hero-button {
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--background-hover);
+    transition: all 0.15s ease-in 0s;
+}
+header section#hero div#hero-content section#button-row a#complementary-hero-button:hover {
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--secondary-color);
+    transform: translateY(-0.1rem);
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

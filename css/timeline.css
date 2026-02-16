@@ -1,0 +1,264 @@
+main {
+    padding-top: 2rem;
+    margin: 2.9rem 0;
+    margin-bottom: 7rem;
+}
+
+main * {
+    padding: 0;
+    margin: 0;
+}
+
+main h3 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+#events-list #future-events {
+    --box-timeline-gap: 2rem;
+    --box-width: clamp(20rem, 30vw, 25rem);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#events-list #future-events div#timeline {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+}
+
+#events-list #future-events div#timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 4rem;
+    width: 2px;
+    z-index: 2;
+    background: linear-gradient(
+        var(--background-color) 0%,
+        var(--background-color) 40%,
+        rgba(0, 0, 0, 0.8) 70%,
+        rgba(0, 0, 0, 0.3) 90%,
+        transparent 100%
+    );
+}
+
+#events-list #future-events div#timeline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4rem;
+    width: 2px;
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        var(--background-color) 0%,
+        var(--background-color) 40%,
+        rgba(0, 0, 0, 0.8) 70%, 
+        rgba(0, 0, 0, 0.3) 90%,
+        transparent 100%
+    );
+}
+
+#events-list #future-events div.future-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--box-width);
+    min-height: 10rem;
+    padding: 3rem 2rem;
+    outline: 1px solid transparent;
+    box-shadow: 0 0 3px -1.7px var(--primary-hover);
+    box-sizing: border-box;
+    border-radius: 1rem;
+    transition: box-shadow 0.2s linear 0s;
+}
+
+#events-list #future-events div.future-box:hover {
+    /*outline-color: var(--secondary-color);*/
+    box-shadow: 0 0 12px -6px var(--primary-hover);
+}
+
+#events-list #future-events div.future-box.odd {
+transform: translateX(calc(-1 * (50% + var(--box-timeline-gap))));
+}
+
+#events-list #future-events div.future-box.even {
+transform: translateX(calc(50% + var(--box-timeline-gap)));
+}
+
+#events-list #future-events div.future-box div#date {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position-anchor: --timeline;
+    width: 12rem;
+    color: var(--background-color);
+    font-size: 0.9rem;
+    margin: 0 0;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 0.7rem;
+    pointer-events: none;
+}
+
+
+#events-list #future-events div.future-box.odd div#date {
+    left: 0;
+    transform: translateX(calc(2*var(--box-timeline-gap) + var(--box-width)));
+}
+
+#events-list #future-events div.future-box.even div#date {
+    right: 0;
+    transform: translateX(calc(-1*(2*var(--box-timeline-gap) + var(--box-width))));
+}
+
+
+#events-list #future-events div.future-box div#date::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    border: 0.3rem solid var(--background-color);
+    outline: 2px solid var(--primary-color);
+}
+
+#events-list #future-events div.future-box.even div#date::after {
+    position: absolute;
+    right: 0;
+    transform: translateX(calc(50% + var(--box-timeline-gap)));
+}
+
+#events-list #future-events div.future-box.odd div#date::after {
+    position: absolute;
+    left: 0;
+    transform: translateX(calc(-1*(50% + var(--box-timeline-gap))));
+}
+
+@media(width <= 800px) {
+    #events-list #future-events {
+        --box-timeline-gap: 10vw;
+        --timeline-position: 10vw;
+        --box-width: 70vw;
+
+        
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: calc(var(--timeline-position) + var(--box-timeline-gap));
+        justify-content: left;
+        margin: 0 0;
+    }
+
+    #events-list #future-events div#timeline {
+        position: absolute;
+        anchor-name: --timeline;
+        top: 0;
+        left: var(--timeline-position);
+        bottom: 0;
+        width: 2px;
+        background-color: black;
+    }
+
+    #events-list #future-events div.future-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: var(--box-width);
+        min-height: 8rem;
+        padding: 3rem 2rem;
+        padding-top: 4.5rem;
+        outline: 1px solid transparent;
+        box-shadow: 0 0 3px -1.7px var(--primary-hover);
+        box-sizing: border-box;
+        border-radius: 1rem;
+        transition: box-shadow 0.2s linear 0s;
+    }
+
+    #events-list #future-events div.future-box:hover {
+        /*outline-color: var(--secondary-color);*/
+        box-shadow: 0 0 12px -6px var(--primary-hover);
+    }
+
+    #events-list #future-events div.future-box.odd {
+        transform: translateX(0);
+    }
+
+        #events-list #future-events div.future-box.even {
+        transform: translateX(0);
+    }
+
+    #events-list #future-events div.future-box div#date {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        color: var(--background-color);
+        font-size: 0.9rem;
+        margin: 0 0;
+        border-radius: 0.5rem;
+        background-color: var(--secondary-color);
+        padding: 0.5rem 0.7rem;
+        left: 0;
+        top: 0;
+    }
+    
+    #events-list #future-events div.future-box div#date h5 {
+        padding: 0;
+        margin: 0;
+        transform: translateX(-0.2rem);
+    }
+
+
+    #events-list #future-events div.future-box.odd div#date {
+        left: 0;
+        transform: translateX(2rem) translateY(1.5rem);
+    }
+
+    #events-list #future-events div.future-box.even div#date {
+        left: 0;
+        transform: translateX(2rem) translateY(1.5rem);
+    }
+
+
+    #events-list #future-events div.future-box div#date::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--secondary-color);
+        border-radius: 1rem;
+        border: 0.3rem solid var(--background-color);
+        outline: 2px solid var(--primary-color);
+        left: 0;
+    }
+
+    #events-list #future-events div.future-box.even div#date::after {
+        position: absolute;
+        left: -2rem;
+        transform: translateX(calc(-50% - var(--box-timeline-gap))) translateY(calc(0.5*var(--box-height) - 50% - 1.5rem));
+    }
+
+    #events-list #future-events div.future-box.odd div#date::after {
+        position: absolute;
+        left: -2rem;
+        transform: translateX(calc(-50% - var(--box-timeline-gap))) translateY(calc(0.5*var(--box-height) - 50% - 1.5rem));
+    }
+}
