@@ -24,7 +24,6 @@ View the site here: [bhsmlc.github.io](https://bhsmlc.github.io)
 
 Notice something wrong? Report it via our [Bug Report Form](https://forms.gle).
 
-> [!TIP]
 > **Updates every week!**
 
 ---
