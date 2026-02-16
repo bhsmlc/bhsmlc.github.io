@@ -15,7 +15,7 @@ View the site here: [bhsmlc.github.io](https://bhsmlc.github.io)
 
 ---
 
-## 🆕 Recent Changes 
+## Recent Changes 
 
 ### v2 (Beta)
 * **Modernization:** Responsive and appealing design for all devices.
