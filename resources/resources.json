@@ -71,10 +71,10 @@
                 "reference": "https://colab.research.google.com/github/bhsmlc/bhsmlc-resources/blob/main/semester2_review.ipynb"
             },
             {
-                "icon": "📽️",
-                "title": "Machine Learning Project Ideas Slideshow",
-                "description": "Slides for semester 2 project selection",
-                "reference": "https://docs.google.com"
+                "icon": "💰",
+                "title": "MNIST & Related Tools Jeopardy",
+                "description": "Practice fundementals of MNIST",
+                "reference": "https://docs.google.com/presentation/d/1FoMMYiooPZ-NC4tZ4JyOLVyd4VJh3QJxRCEEBYpAgM0/edit?usp=sharing"
             }
         ],
         "Tools & Platforms": [
