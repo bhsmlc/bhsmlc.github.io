@@ -142,7 +142,9 @@
             "date": "Tuesday, April 21 2026",
             "location": "During Lunch in Room 1325",
             "content": "Agenda: Neural Networks Intro",
-            "references": []
+            "references": [
+                "https://docs.google.com/presentation/d/1Lla8MhpwGHrQbxzYEmUMxLnRBvzittNnnn4ywWHvObM/edit?usp=sharing"
+            ]
         }
     ]
 }
