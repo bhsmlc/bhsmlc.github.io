@@ -1,10 +1,17 @@
 {
     "future": [
         {
-            "title": "Next Meeting",
-            "date": "Tuesday, April 21 2026",
+            "title": "Next (16th) Meeting",
+            "date": "Tuesday, May 4 2026",
             "location": "During Lunch in Room 1325",
-            "content": "Agenda: CNNs (Convolutional Neural Networks) Intro OR Gradient Descent",
+            "content": "Agenda: Implement a neural network in our MNIST Project: follow along.",
+            "references": []
+        },
+        {
+            "title": "Final (17th) Meeting",
+            "date": "Tuesday, May 11 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Agenda: Wrap up the MNIST project, discuss officers for next year.",
             "references": []
         }
     ],
@@ -128,6 +135,13 @@
             "date": "Tuesday, April 14 2026",
             "location": "During Lunch in Room 1325",
             "content": "Agenda: Python basics workshop",
+            "references": []
+        },
+        {
+            "title": "15th Meeting",
+            "date": "Tuesday, April 21 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Agenda: Neural Networks Intro",
             "references": []
         }
     ]
