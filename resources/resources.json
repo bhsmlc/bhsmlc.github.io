@@ -75,6 +75,12 @@
                 "title": "MNIST & Related Tools Jeopardy",
                 "description": "Practice fundementals of MNIST",
                 "reference": "https://docs.google.com/presentation/d/1FoMMYiooPZ-NC4tZ4JyOLVyd4VJh3QJxRCEEBYpAgM0/edit?usp=sharing"
+            },
+            {
+                "icon": "🔢",
+                "title": "MNIST Files",
+                "description": "All our mnist resources",
+                "reference": "https://github.com/bhsmlc/bhsmlc-resources/tree/main/projects/mnist-hadwritten-digits"
             }
         ],
         "Tools & Platforms": [

@@ -1,13 +1,6 @@
 {
     "future": [
         {
-            "title": "Next (16th) Meeting",
-            "date": "Tuesday, May 4 2026",
-            "location": "During Lunch in Room 1325",
-            "content": "Agenda: Implement a neural network in our MNIST Project: follow along.",
-            "references": []
-        },
-        {
             "title": "Final (17th) Meeting",
             "date": "Tuesday, May 11 2026",
             "location": "During Lunch in Room 1325",
@@ -144,6 +137,16 @@
             "content": "Agenda: Neural Networks Intro",
             "references": [
                 "https://docs.google.com/presentation/d/1Lla8MhpwGHrQbxzYEmUMxLnRBvzittNnnn4ywWHvObM/edit?usp=sharing"
+            ]
+        },
+        {
+            "title": "16th Meeting",
+            "date": "Tuesday, May 4 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Agenda: Implement a neural network in our MNIST Project: follow along.",
+            "references": [
+                "https://github.com/bhsmlc/bhsmlc-resources/blob/main/projects/mnist-hadwritten-digits/%5B5%5D_tensorflow_cnn.ipynb",
+                "https://github.com/bhsmlc/bhsmlc-resources/blob/main/projects/mnist-hadwritten-digits/%5B5%5D_tensorflow_cnn_model.keras"
             ]
         }
     ]
