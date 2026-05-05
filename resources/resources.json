@@ -79,7 +79,7 @@
             {
                 "icon": "🔢",
                 "title": "MNIST Files",
-                "description": "All our mnist resources",
+                "description": "All our MNIST resources",
                 "reference": "https://github.com/bhsmlc/bhsmlc-resources/tree/main/projects/mnist-hadwritten-digits"
             }
         ],
