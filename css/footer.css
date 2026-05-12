@@ -34,8 +34,9 @@ footer div#social-links a#github img {
 footer div#social-links a#remind img {
     width: 120%;
 }
-
-
+footer div#social-links a#discord img {
+    width: 100%;
+}
 
 footer small {
     font-weight: 400;
