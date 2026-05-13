@@ -31,6 +31,12 @@
                 "title": "Official Python Basics Notebook",
                 "description": "Club’s Python basics notebook",
                 "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/python_basics_ml.ipynb"
+            },
+            {
+                "icon": "🛠️",
+                "title": "GitHub Codespaces Setup Guide",
+                "description": "How to set up GitHub Codespaces",
+                "reference": "https://docs.google.com/document/d/1GLwxHBmZZC04rF8V_YCzOTsG-8RrK4igK9YN1MfpPbA/edit?usp=sharing"
             }
         ],
         "Meeting Slides & Files": [
