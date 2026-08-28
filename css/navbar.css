@@ -40,29 +40,26 @@ header nav ul li {
     margin: 0;
     list-style: none;
 }
-header nav ul li:has(div.nav-logo) {
+header nav ul li a:has(div.nav-logo) {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     user-select: none;
     transition: all 0.2s ease-in-out 0s;
 }
-header nav ul li:has(div.nav-logo):hover {
-    transform: scale(1.02) translateY(-0.1rem);
-}
-header nav ul li div.nav-logo img {
+header nav ul li a div.nav-logo img {
     width: 5rem;
 }
-header nav ul li span#logo-label {
+header nav ul li a span#logo-label {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--secondary-color);
     flex-wrap: wrap;
 }
-header nav ul li div#logo-light {
+header nav ul li a div#logo-light {
     display: inline-block;
 }
-header nav ul li div#logo-dark {
+header nav ul li a div#logo-dark {
     display: none;
 }
 header nav ul li:has(div#nav-spacer) {
@@ -91,8 +88,12 @@ header nav ul li a::after {
     transition: all 0.2s ease-in-out 0s;
 }
 header nav ul li a:hover::after {
-    left: 0;
-    width: 100%;
+    left: 25%;
+    width: 50%;
+}
+header nav ul li a#main-page:hover::after{
+    left:0 !important;
+    width: 0 !important;
 }
 header nav ul li button#theme-control {
     position: relative;
