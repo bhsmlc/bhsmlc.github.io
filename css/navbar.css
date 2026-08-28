@@ -82,6 +82,7 @@ header nav ul li a::after {
     display: block;
     left: 50%;
     top: 125%;
+    border-radius: 10px;
     height: 0.2rem;
     width: 0;
     background-color: var(--secondary-color);
