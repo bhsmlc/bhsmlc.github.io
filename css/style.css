@@ -44,3 +44,12 @@ main {
 ::view-transition-new(root){
     animation: 0.5s ease both fadein;
 }
+header nav {
+    view-transition-name: navbar;
+}
+::view-transition-old(navbar){
+    animation: none !important;
+}
+::view-transition-new(navbar){
+    animation: none !important;
+}
