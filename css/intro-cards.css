@@ -1,91 +1,69 @@
+@import "variables.css";
+
+* {
+  box-sizing: border-box;
+}
+
 main {
-    display: grid;
-    grid-template-rows: repeat(4, max-content);
-    grid-template-columns: 1fr;
-    gap: clamp(1rem, 3vw, 2rem);
-    row-gap: 4rem;
-    margin: 5rem 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
 }
 
-main * {
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-main div div, main div section {
-    outline: 1px solid transparent;
-    box-shadow: 0 0 3px -1.7px var(--primary-hover);
-    box-sizing: border-box;
-    transition: all 0.2s linear 0s;
-    user-select: none;
-}
-
-main div div:hover, main div section:hover {
-    outline-color: var(--secondary-color);
-    box-shadow: 0 0 12px -6px var(--primary-hover);
-    transform: translateY(-0.5rem);
-}
-
+/* Center Top Header */
 main h3 {
-    grid-area: 1 / 1 / 2 / -1;
-    justify-self: center;
-    align-self: center;
-    font-size: 2rem;
-    font-weight: 600;
+  color: var(--secondary-color, #2b6cb0);
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  letter-spacing: -0.02em;
 }
 
-main div#do-cards {
-    grid-area: 2 / 1 / 3 / -1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: max-content;
-    column-gap: clamp(1rem, 3vw, 2rem);
+/* Row Layout: Split Left (H4) & Right (List) */
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem 0;
+  background: transparent; /* Ensures no background */
 }
 
-@media (width <= 800px) {
-    main div#do-cards {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr;
-        gap: clamp(1rem, 3vw, 2rem);
-    }
-    main {
-        margin: 5rem 5vw;
-    }
+/* Left Column Heading */
+.info-row h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.3;
 }
 
-main div#do-cards section {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    padding: 0px 5%;
-    height: 15rem;
-    border-radius: 2rem;
-    /*box-shadow: 0 0 10px -6px var(--primary-hover);*/
+/* Right Column Bulleted List */
+.info-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
 }
 
-main div#join-reqs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, max-content);
-    gap: clamp(0.8rem, 3vw, 2rem);
+.info-list li {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
-main div#join-reqs div {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: clamp(1rem, 2.5vw, 2.8rem);
-    width: 100%;
-    padding: 0 clamp(1rem, 2vw, 2rem);
-    aspect-ratio: 1 / 1;
-    border-radius: 20%;
-    /*box-shadow: 0 0 10px -6px var(--primary-hover);*/
+
+.info-list li:last-child {
+  margin-bottom: 0;
 }
-main div#join-reqs div:nth-child(4) {
-    grid-column: 1 / -1;
-    aspect-ratio: 6 / 1;
-    border-radius: 2rem;
+
+/* Subtle separator between rows instead of full box borders */
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.5rem 0;
 }
