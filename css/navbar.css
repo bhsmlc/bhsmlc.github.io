@@ -96,6 +96,14 @@ header nav ul li a#main-page:hover::after{
     left:0 !important;
     width: 0 !important;
 }
+
+header nav ul li a[aria-current="page"] {
+    color: var(--secondary-color);
+}
+header nav ul li a[aria-current="page"]::after {
+    left: 25%;
+    width: 50%;
+}
 header nav ul li button#theme-control {
     position: relative;
     display: flex;
@@ -137,7 +145,8 @@ html[data-theme="dark"] header nav ul li button#theme-control svg#moon {
     transform: rotate(0deg) scale(1);
 }
 @media (prefers-reduced-motion: reduce) {
-    header nav ul li button#theme-control svg {
+    header nav ul li button#theme-control svg,
+    header nav ul li.nav-item {
         transition: none;
     }
 }
@@ -188,25 +197,79 @@ html[data-theme="dark"] header nav ul li a div#logo-dark {
         display: none;
     }
     header nav ul li:first-child {
+        order: 1;
         flex-grow: 1;
+        min-width: 0;
+    }
+    header nav ul li:first-child a {
+        min-width: 0;
+    }
+    header nav ul li:first-child a span#logo-label {
+        flex-shrink: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    header nav ul li:has(button#theme-control) {
+        order: 2;
+        flex-shrink: 0;
     }
     header nav ul li:has(button#nav-toggle) {
+        order: 3;
+        flex-shrink: 0;
         display: block;
     }
     header nav ul li.nav-item {
+        order: 4;
+        display: block;
+        flex-basis: 100%;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+        transition: opacity 0.25s ease, max-height 0.3s ease, padding 0.3s ease;
+    }
+    header nav ul li.nav-item a {
+        display: inline-block;
+        font-size: 1.1rem;
+        padding: 0.6rem 1.4rem;
+        border: 1px solid var(--background-hover);
+        border-radius: 0.6rem;
+    }
+    header nav ul li.nav-item a:hover,
+    header nav ul li.nav-item a[aria-current="page"] {
+        background-color: var(--secondary-background);
+        border-color: var(--secondary-color);
+    }
+    header nav ul li.nav-item a::after {
         display: none;
     }
     header nav.nav-open ul li.nav-item {
-        display: block;
-        flex-basis: 100%;
+        opacity: 1;
+        max-height: 4rem;
         padding: 0.9rem 0;
-        text-align: center;
-        border-top: 1px solid var(--background-hover);
-    }
-    header nav.nav-open ul li.nav-item a {
-        font-size: 1.1rem;
     }
     header nav.nav-open ul {
         box-shadow: 0 4px 16px var(--secondary-shadow);
+    }
+}
+
+@media (width <= 480px) {
+    header nav ul {
+        padding-left: 0.25rem;
+    }
+    header nav ul li:first-child {
+        padding-left: 0;
+    }
+    header nav ul li a div.nav-logo img {
+        width: 3.5rem;
+    }
+    header nav ul li a span#logo-label {
+        font-size: 0.95rem;
+    }
+    header nav ul li button#theme-control,
+    header nav ul li button#nav-toggle {
+        margin-left: 0.25rem;
     }
 }
