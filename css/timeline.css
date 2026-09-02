@@ -34,7 +34,7 @@ main h3 {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: black;
+    background-color: var(--primary-color);
 }
 
 #events-list #future-events div#timeline::before {
@@ -47,9 +47,7 @@ main h3 {
     background: linear-gradient(
         var(--background-color) 0%,
         var(--background-color) 40%,
-        rgba(0, 0, 0, 0.8) 70%,
-        rgba(0, 0, 0, 0.3) 90%,
-        transparent 100%
+        var(--primary-color) 100%
     );
 }
 
@@ -64,9 +62,7 @@ main h3 {
         to top,
         var(--background-color) 0%,
         var(--background-color) 40%,
-        rgba(0, 0, 0, 0.8) 70%, 
-        rgba(0, 0, 0, 0.3) 90%,
-        transparent 100%
+        var(--primary-color) 100%
     );
 }
 
@@ -105,7 +101,7 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
     justify-content: center;
     position-anchor: --timeline;
     width: 12rem;
-    color: var(--background-color);
+    color: var(--on-secondary-color);
     font-size: 0.9rem;
     margin: 0 0;
     border-radius: 1rem;
@@ -173,7 +169,7 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
         left: var(--timeline-position);
         bottom: 0;
         width: 2px;
-        background-color: black;
+        background-color: var(--primary-color);
     }
 
     #events-list #future-events div.future-box {
@@ -209,7 +205,7 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
         position: absolute;
         display: flex;
         align-items: center;
-        color: var(--background-color);
+        color: var(--on-secondary-color);
         font-size: 0.9rem;
         margin: 0 0;
         border-radius: 0.5rem;

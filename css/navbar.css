@@ -67,7 +67,7 @@ header nav ul li:has(div#nav-spacer) {
     max-width: 50%;
 }
 header nav ul li a {
-    color: black;
+    color: var(--primary-color);
     font-size: 1rem;
     text-decoration: none;
     user-select: none;
@@ -106,23 +106,107 @@ header nav ul li button#theme-control {
     margin-left: 0.5rem;
     border-radius: 9999rem;
     background-color: var(--secondary-color);
-    border: 0 solid black;
+    color: var(--on-secondary-color);
+    border: 0;
     overflow: hidden;
     transition: all 0.2s cubic-bezier(.45,.52,.12,.95) 0s;
 }
 header nav ul li button#theme-control:hover {
-    transform: rotateZ(90deg) scale(1.1);
     background-color: var(--secondary-dark);
 }
-header nav ul li button#theme-control svg#sun {
+header nav ul li button#theme-control svg {
     position: absolute;
-    display: inline;
-    width: 90%;
-    transform: translateY(-0.0625rem);
+    width: 50%;
+    height: 50%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+header nav ul li button#theme-control svg#sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
 }
 header nav ul li button#theme-control svg#moon {
-    position: absolute;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+}
+html[data-theme="dark"] header nav ul li button#theme-control svg#sun {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+html[data-theme="dark"] header nav ul li button#theme-control svg#moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+    header nav ul li button#theme-control svg {
+        transition: none;
+    }
+}
+
+header nav ul li:has(button#nav-toggle) {
     display: none;
-    height: 60%;
-    padding-right: 0.3rem;;
+}
+header nav ul li button#nav-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
+    border-radius: 9999rem;
+    border: 0;
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    transition: all 0.2s ease-in-out 0s;
+}
+header nav ul li button#nav-toggle:hover {
+    background-color: var(--secondary-dark);
+}
+header nav ul li button#nav-toggle svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+html[data-theme="dark"] header nav ul li a div#logo-light {
+    display: none;
+}
+html[data-theme="dark"] header nav ul li a div#logo-dark {
+    display: inline-block;
+}
+
+@media (width <= 800px) {
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 0.5rem 0.75rem;
+    }
+    header nav ul::before,
+    header nav ul::after {
+        flex-grow: 0;
+        max-width: 0;
+    }
+    header nav ul li:has(div#nav-spacer) {
+        display: none;
+    }
+    header nav ul li:first-child {
+        flex-grow: 1;
+    }
+    header nav ul li:has(button#nav-toggle) {
+        display: block;
+    }
+    header nav ul li.nav-item {
+        display: none;
+    }
+    header nav.nav-open ul li.nav-item {
+        display: block;
+        flex-basis: 100%;
+        padding: 0.9rem 0;
+        text-align: center;
+        border-top: 1px solid var(--background-hover);
+    }
+    header nav.nav-open ul li.nav-item a {
+        font-size: 1.1rem;
+    }
+    header nav.nav-open ul {
+        box-shadow: 0 4px 16px var(--secondary-shadow);
+    }
 }

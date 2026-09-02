@@ -3,6 +3,8 @@
 
 html {
     /*scroll-behavior: smooth;*/
+    background-color: var(--background-color);
+    color: var(--primary-color);
 }
 body {
     display: flex;

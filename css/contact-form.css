@@ -28,7 +28,7 @@ main form {
 
 main form * {
     box-sizing: border-box;
-    width: clamp(25rem, 70vw, 40rem);
+    width: min(40rem, 100%);
 }
 
 main form label {
@@ -95,4 +95,19 @@ main form input#submit:hover, main form input#submit:focus-visible {
 main form input#submit:active {
     transform: scale(0.98);
     background-color: var(--primary-light);
+}
+
+html[data-theme="dark"] main form input,
+html[data-theme="dark"] main form textarea#message {
+    background-color: var(--secondary-light);
+    color: var(--primary-color);
+}
+
+@media (width <= 480px) {
+    main {
+        margin: 1.5rem 0.75rem;
+    }
+    main h3 {
+        font-size: 1.5rem;
+    }
 }
