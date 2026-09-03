@@ -49,7 +49,10 @@ async function loadEvents() {
     }
 
     renderEvents(futureEvents, futureContainer);
-    renderEvents(pastEvents, pastContainer);
+    const recentPastEvents = [...pastEvents].sort((a, b) => {
+        return Date.parse(b["date"]) - Date.parse(a["date"]);
+    });
+    renderEvents(recentPastEvents, pastContainer);
 
 
     // Box height for mobile layout 

@@ -60,6 +60,7 @@ main h3 {
 #events-list #past-events-list {
     --box-width: min(clamp(20rem, 30vw, 25rem), calc(50% - var(--box-timeline-gap)));
     width: calc(100% - 2rem);
+    padding-right: 1rem;
     margin: 2rem auto;
 }
 
@@ -251,6 +252,7 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
     }
 
     #events-list #past-events-list {
+        --box-width: 100%;
         width: auto;
     }
 
@@ -446,20 +448,34 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
 }
 
 @media (width <= 800px) {
+    main {
+        padding: 1.5rem 1rem 0;
+    }
+
+    main h3 {
+        margin: 1.5rem 0;
+        font-size: 1.75rem;
+    }
+
+    #events-list {
+        width: 100%;
+        overflow-x: clip;
+    }
+
     #events-list .event-timeline .event-row {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.75rem;
         width: 100%;
-        padding-left: calc(var(--timeline-position) + var(--box-timeline-gap));
+        padding-left: 0;
     }
 
     #events-list .event-timeline .event-row .future-box,
     #events-list .event-timeline .event-row.odd .future-box,
     #events-list .event-timeline .event-row.even .future-box {
         width: var(--box-width);
-        max-width: calc(100vw - 4.5rem);
+        max-width: 100%;
         padding: 2.25rem 2rem;
         transform: none;
         order: 2;
@@ -470,7 +486,8 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
     #events-list .event-timeline .event-row.even .event-date {
         width: min(12rem, 100%);
         justify-self: auto;
-        margin-left: 2rem;
+        margin-left: 0;
+        overflow-wrap: anywhere;
         transform: none;
         order: 1;
     }
@@ -478,20 +495,33 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
     #events-list .event-timeline .event-row .event-date::after,
     #events-list .event-timeline .event-row.odd .event-date::after,
     #events-list .event-timeline .event-row.even .event-date::after {
-        left: -2rem;
+        left: calc(0px - var(--box-timeline-gap));
         right: auto;
         transform: translateX(-50%);
+    }
+
+    #events-list .event-timeline div#timeline,
+    #events-list .event-timeline div#past-timeline {
+        top: 1.75rem;
+        bottom: 1.75rem;
+    }
+
+    #events-list .event-timeline div#timeline::before,
+    #events-list .event-timeline div#timeline::after,
+    #events-list .event-timeline div#past-timeline::before,
+    #events-list .event-timeline div#past-timeline::after {
+        display: none;
     }
 }
 
 @media (width <= 480px) {
     #events-list .event-timeline .event-row {
-        padding-left: calc(var(--timeline-position) + var(--box-timeline-gap));
+        padding-left: 0;
     }
 
     #events-list .event-timeline .event-row .future-box,
     #events-list .event-timeline .event-row.odd .future-box,
     #events-list .event-timeline .event-row.even .future-box {
-        max-width: calc(100vw - 3.5rem);
+        max-width: 100%;
     }
 }
