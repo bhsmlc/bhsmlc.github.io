@@ -1,10 +1,38 @@
 {
     "future": [
         {
-            "title": "Not any for now",
-            "date": ".",
-            "location": ".",
-            "content": ".",
+            "title": "Meeting 1: Introductions and Icebreaker",
+            "date": "Tuesday, September 15 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Quick survey, introductions, and pictionary.",
+            "references": []
+        },
+        {
+            "title": "Meeting 2: What is Machine Learning?",
+            "date": "Tuesday, September 22 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Introduce ML and briefly discuss club curriculum.",
+            "references": []
+        },
+        {
+            "title": "Meeting 3: Linear Regression (Closed Form)",
+            "date": "Tuesday, September 29 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Learn about linear regression and how to implement it.",
+            "references": []
+        },
+        {
+            "title": "Meeting 4: Linear Regression (Closed Form Visual)",
+            "date": "Tuesday, October 6 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Visualize our line and data from last meeting's linear regression activity.",
+            "references": []
+        },
+        {
+            "title": "Meeting 5: Classification Trees",
+            "date": "Tuesday, October 13 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Learn about classificaiton trees and implement them.",
             "references": []
         }
     ],
