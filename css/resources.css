@@ -84,13 +84,13 @@ main section#resource-list div.resource-category div.category-contents {
 main section#resource-list div.resource-category div.category-contents a.resource-box {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas: 
         "icon title"
         "icon description";
     column-gap: 0.9rem;
     align-items: center;
-    height: 5.3rem;
+    min-height: 5.3rem;
     padding: 0.5rem;
     border: 0.1rem solid transparent; /*var(--primary-color);*/
     /*border-image: linear-gradient(
@@ -103,7 +103,6 @@ main section#resource-list div.resource-category div.category-contents a.resourc
         linear-gradient(to right, var(--border-grad-start), var(--border-grad-end)) border-box;
     border-radius: 0.7rem;
     /*box-shadow: 0 0 3px -1.7px var(--primary-hover);*/
-    overflow: hidden;
     transition: all 0.2s ease 0s;
 }
 
@@ -139,9 +138,10 @@ main section#resource-list div.resource-category div.category-contents a.resourc
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    font-size: 2.4rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    font-size: 2rem;
     line-height: 1;
     border-radius: 0.7rem;
     background-color: var(--secondary-color);
@@ -161,12 +161,14 @@ main section#resource-list div.resource-category div.category-contents a.resourc
 @media(width <= 800px) {
     main section#resource-list div.resource-category div.category-contents a.resource-box {
         column-gap: 0.6rem;
-        height: 4rem;
+        min-height: 4rem;
         padding: 0.4rem;
         border-radius: 0.5rem;
     }
     main section#resource-list div.resource-category div.category-contents a.resource-box div.resource-icon {
-        font-size: 2rem;
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.6rem;
         border-radius: 0.5rem;
     }
     main section#resource-list div.resource-category div.category-contents a.resource-box h5.resource-title {
@@ -178,8 +180,12 @@ main section#resource-list div.resource-category div.category-contents a.resourc
 }
 
 @media (width <= 480px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     main section#resource-list div.resource-category div.category-contents {
-        margin-left: 2vw;
-        margin-right: 2vw;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }

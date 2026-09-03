@@ -1,10 +1,17 @@
 @import "variables.css";
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap";
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     /*scroll-behavior: smooth;*/
     background-color: var(--background-color);
     color: var(--primary-color);
+    overflow-x: hidden;
 }
 body {
     display: flex;
