@@ -1,4 +1,8 @@
 :root {
+    color-scheme: light;
+
+    --on-secondary-color: #ffffff;
+
     --primary-color: #0B0F14;
     --primary-hover: #1A202C;
     --primary-light: #2f456f;
@@ -13,4 +17,23 @@
     
     --background-color: #ffffff;
     --background-hover: #cbcbcb;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --primary-color: #E6F0FF;
+    --primary-hover: #93C5FD;
+    --primary-light: #7e97c0;
+    
+    --secondary-color: #3B82F6;
+    --secondary-dark: #2563eb;
+    --secondary-light: #1B2735;
+    --secondary-hover: #60a5fa;
+    --secondary-shadow: rgba(59, 130, 246, 0.16);
+    --secondary-background: rgba(59, 130, 246, 0.14);
+    --secondary-dark-shadow: rgba(147, 197, 253, 0.3);
+    
+    --background-color: #0B0F14;
+    --background-hover: #16202E;
 }

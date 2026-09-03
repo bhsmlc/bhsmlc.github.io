@@ -22,7 +22,7 @@ async function loadResources() {
             newResource.rel = "noreferrer";
 
             // a icon, title, and a desc
-            newResource.innerHTML = `<div class="resource-icon">${resource["icon"]}</div><h5 class="resource-title">${resource["title"]}</h5><p class="resource-description">${resource["description"]}</p>`;
+            newResource.innerHTML = `<div class="resource-icon"><img src="${resource["icon"]}" alt="" class="resource-icon-img"></div><h5 class="resource-title">${resource["title"]}</h5><p class="resource-description">${resource["description"]}</p>`;
 
             contents.appendChild(newResource);
         }

@@ -2,6 +2,7 @@ main {
     padding-top: 2rem;
     margin: 2.9rem 0;
     margin-bottom: 7rem;
+    padding-inline: 1rem;
 }
 
 main * {
@@ -28,7 +29,7 @@ main form {
 
 main form * {
     box-sizing: border-box;
-    width: clamp(25rem, 70vw, 40rem);
+    width: min(40rem, 100%);
 }
 
 main form label {
@@ -74,7 +75,8 @@ main form textarea#message:focus {
 }
 
 main form input#submit {
-    width: clamp(1.25rem, 35vw, 20rem);
+    width: clamp(10rem, 50vw, 20rem);
+    padding: 0.75rem 2rem;
     color: var(--primary-color);
     font-weight: 600;
     margin-top: 1rem;
@@ -95,4 +97,19 @@ main form input#submit:hover, main form input#submit:focus-visible {
 main form input#submit:active {
     transform: scale(0.98);
     background-color: var(--primary-light);
+}
+
+html[data-theme="dark"] main form input,
+html[data-theme="dark"] main form textarea#message {
+    background-color: var(--secondary-light);
+    color: var(--primary-color);
+}
+
+@media (width <= 480px) {
+    main {
+        margin: 1.5rem 0;
+    }
+    main h3 {
+        font-size: 1.5rem;
+    }
 }

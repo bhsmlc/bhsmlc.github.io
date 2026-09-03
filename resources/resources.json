@@ -3,37 +3,37 @@
     {
         "Tutorials & Guides": [
             {
-                "icon": "📘",
+                "icon": "/images/icons/scikit-learn.svg",
                 "title": "Scikit-learn",
                 "description": "Machine learning library for Python",
                 "reference": "https://scikit-learn.org/"
             },
             {
-                "icon": "🤖",
+                "icon": "/images/icons/tensorflow.svg",
                 "title": "TensorFlow",
                 "description": "Deep learning framework",
                 "reference": "https://www.tensorflow.org/"
             },
             {
-                "icon": "🐼",
+                "icon": "/images/icons/pandas.svg",
                 "title": "Pandas",
                 "description": "Data manipulation library",
                 "reference": "https://pandas.pydata.org/"
             },
             {
-                "icon": "🎓",
+                "icon": "/images/icons/course.svg",
                 "title": "Kaggle Learn: Python & ML Courses",
                 "description": "Online courses for Python and machine learning",
                 "reference": "https://www.kaggle.com/learn"
             },
             {
-                "icon": "📝",
+                "icon": "/images/icons/notebook-python.svg",
                 "title": "Official Python Basics Notebook",
                 "description": "Club’s Python basics notebook",
                 "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/python_basics_ml.ipynb"
             },
             {
-                "icon": "🛠️",
+                "icon": "/images/icons/tools.svg",
                 "title": "GitHub Codespaces Setup Guide",
                 "description": "How to set up GitHub Codespaces",
                 "reference": "https://docs.google.com/document/d/1GLwxHBmZZC04rF8V_YCzOTsG-8RrK4igK9YN1MfpPbA/edit?usp=sharing"
@@ -41,49 +41,49 @@
         ],
         "Meeting Slides & Files": [
             {
-                "icon": "📓",
+                "icon": "/images/icons/notebook-regression.svg",
                 "title": "Linear Regression Notebook",
                 "description": "Notebook from the linear regression meeting",
                 "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/linear_regression.ipynb"
             },
             {
-                "icon": "🌳",
+                "icon": "/images/icons/tree.svg",
                 "title": "Classifying Trees Slides & Notebook",
                 "description": "Slides and notebook on decision trees",
                 "reference": "https://docs.google.com/presentation/d/1mREcDvdA9_eVRbvwmzjc6NQiPsghzeHW/edit?usp=sharing&ouid=114001257580882162089&rtpof=true&sd=true"
             },
             {
-                "icon": "🖼️",
+                "icon": "/images/icons/image.svg",
                 "title": "Meeting Slides - How Image Recognition Works",
                 "description": "Slides explaining image recognition concepts",
                 "reference": "https://docs.google.com/presentation/d/15_l1Sta-29WuD9jWo4aMS91G_Bb6LLlI/edit?usp=sharing&ouid=114001257580882162089&rtpof=true&sd=true"
             },
             {
-                "icon": "📊",
+                "icon": "/images/icons/chart.svg",
                 "title": "ML Libraries Intro Notebook",
                 "description": "Intro to machine learning libraries in Python",
                 "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/libraries_intro.ipynb"
             },
             {
-                "icon": "❓",
+                "icon": "/images/icons/question.svg",
                 "title": "Kahoot: download spreadsheet here",
                 "description": "Spreadsheet for Kahoot questions",
                 "reference": "../resources/files/2025_fall-semester1-kahoot.xlsx"
             },
             {
-                "icon": "🧠",
+                "icon": "/images/icons/brain.svg",
                 "title": "Bingo Quiz Python Program",
                 "description": "Python program for bingo quiz",
                 "reference": "https://colab.research.google.com/github/bhsmlc/bhsmlc-resources/blob/main/semester2_review.ipynb"
             },
             {
-                "icon": "💰",
+                "icon": "/images/icons/money.svg",
                 "title": "MNIST & Related Tools Jeopardy",
                 "description": "Practice fundementals of MNIST",
                 "reference": "https://docs.google.com/presentation/d/1FoMMYiooPZ-NC4tZ4JyOLVyd4VJh3QJxRCEEBYpAgM0/edit?usp=sharing"
             },
             {
-                "icon": "🔢",
+                "icon": "/images/icons/digits.svg",
                 "title": "MNIST Files",
                 "description": "All our MNIST resources",
                 "reference": "https://github.com/bhsmlc/bhsmlc-resources/tree/main/projects/mnist-hadwritten-digits"
@@ -91,19 +91,19 @@
         ],
         "Tools & Platforms": [
             {
-                "icon": "💻",
+                "icon": "/images/icons/python.svg",
                 "title": "Online Python Compiler",
                 "description": "Tool for running Python code online",
                 "reference": "https://www.programiz.com/python-programming/online-compiler/"
             },
             {
-                "icon": "☁️",
+                "icon": "/images/icons/google-colab.svg",
                 "title": "Google Colab",
                 "description": "Cloud Python notebook environment",
                 "reference": "https://colab.research.google.com/"
             },
             {
-                "icon": "🐙",
+                "icon": "/images/icons/github.svg",
                 "title": "GitHub",
                 "description": "Code hosting platform",
                 "reference": "https://github.com/"

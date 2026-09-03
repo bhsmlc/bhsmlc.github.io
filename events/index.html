@@ -10,6 +10,10 @@
         <meta name="author" content="Burbank High School Machine Learning Club">
         <meta name="keywords" content="Burbank High School, BHS, Burbank High clubs, Machine Learning Club, AI Club, ML Club">
 
+        <script>
+        (function(){try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(_){}})();
+        </script>
+
         <link rel="icon" href="/images/dark_logo.svg" type="image/svg+xml">
 
         <link rel="stylesheet" href="/css/style.css">
@@ -17,35 +21,10 @@
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/timeline.css">
         <link rel="stylesheet" href="/css/hero.css">
-        
+
         <title>Events - BHS ML Club</title>
 
-        <style>
-            header nav ul li a#events-link {
-                color: var(--secondary-color);
-                transition: all 0.2s ease 0s;
-            }
-            header nav ul li a#events-link::after {
-                content: "";
-                position: absolute;
-                display: block;
-                left: 50%;
-                top: 125%;
-                height: 0.2rem;
-                width: 0;
-                background-color: var(--secondary-color);
-                left: 0;
-                width: 100%;
-                transition: all 0.1s ease 0s;
-            }
-            header nav ul li a#events-link:hover {
-                color: var(--secondary-dark);
-            }
-            header nav ul li a#events-link:hover::after {
-                background-color: var(--secondary-dark);
-            }
-        </style>
-    </head>
+        </head>
     <body>
         <header>
             <nav>
@@ -66,11 +45,16 @@
             <h3>Events</h3>
 
             <div id="events-list">
-                <div id="past-events">
-                    
-                </div>
-                <div id="future-events">
+                <div id="future-events" class="event-timeline">
                     <div id="timeline"></div>
+                </div>
+                <div id="past-events">
+                    <details class="past-meetings">
+                        <summary>Past Meetings</summary>
+                        <div id="past-events-list" class="event-timeline">
+                            <div id="past-timeline"></div>
+                        </div>
+                    </details>
                 </div>
             </div>
         </main>
@@ -84,7 +68,9 @@
             loadComponent("footer", "/includes/footer.html");
             loadComponent("nav", "/includes/navbar.html");
         </script>
+        <script src="/js/theme.js"></script>
+        <script src="/js/nav.js"></script>
         <script src="/js/load_events.js" defer>
         </script>
     </body>
-</html> 
+</html>
