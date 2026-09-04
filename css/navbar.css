@@ -195,11 +195,14 @@ html[data-theme="dark"] header nav ul li a div#logo-dark {
         max-width: 0;
     }
     header nav ul li:has(div#nav-spacer) {
-        display: none;
+        display: block;
+        order: 2;
+        flex-grow: 1;
+        max-width: none;
     }
     header nav ul li:first-child {
         order: 1;
-        flex-grow: 1;
+        flex-grow: 0;
         min-width: 0;
     }
     header nav ul li:first-child a {
@@ -212,16 +215,16 @@ html[data-theme="dark"] header nav ul li a div#logo-dark {
         text-overflow: ellipsis;
     }
     header nav ul li:has(button#theme-control) {
-        order: 2;
+        order: 3;
         flex-shrink: 0;
     }
     header nav ul li:has(button#nav-toggle) {
-        order: 3;
+        order: 4;
         flex-shrink: 0;
         display: block;
     }
     header nav ul li.nav-item {
-        order: 4;
+        order: 5;
         display: block;
         flex-basis: 100%;
         opacity: 0;
