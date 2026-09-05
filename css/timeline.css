@@ -60,7 +60,6 @@ main h3 {
 #events-list #past-events-list {
     --box-width: min(clamp(20rem, 30vw, 25rem), calc(50% - var(--box-timeline-gap)));
     width: calc(100% - 2rem);
-    padding-right: 1rem;
     margin: 2rem auto;
 }
 
@@ -73,6 +72,7 @@ main h3 {
     bottom: 0;
     width: 2px;
     background-color: var(--primary-color);
+    transform: translateX(-50%);
 }
 
 #events-list .event-timeline div#timeline::before,
@@ -83,11 +83,7 @@ main h3 {
     height: 4rem;
     width: 2px;
     z-index: 2;
-    background: linear-gradient(
-        var(--background-color) 0%,
-        var(--background-color) 40%,
-        var(--primary-color) 100%
-    );
+    background: var(--primary-color) 100%;
 }
 
 #events-list .event-timeline div#timeline::after,
@@ -98,12 +94,7 @@ main h3 {
     height: 4rem;
     width: 2px;
     z-index: 2;
-    background: linear-gradient(
-        to top,
-        var(--background-color) 0%,
-        var(--background-color) 40%,
-        var(--primary-color) 100%
-    );
+    background: var(--primary-color) 100%;
 }
 
 #events-list .event-timeline div.future-box {
@@ -265,6 +256,10 @@ transform: translateX(calc(50% + var(--box-timeline-gap)));
         bottom: 0;
         width: 2px;
         background-color: var(--primary-color);
+    }
+
+    #events-list .event-timeline div#past-timeline {
+        transform: translateX(-50%) translateY(-5px);
     }
 
     #events-list .event-timeline div.future-box {
