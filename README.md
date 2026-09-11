@@ -22,7 +22,7 @@ View the site here: [bhsmlc.github.io](https://bhsmlc.github.io)
 * **Contact Form:** A simple and accessible way to connect with our team.
 * **Social Links:** Direct access to our official social spaces.
 
-Notice something wrong? Report it via our [Bug Report Form](https://forms.
+Notice something wrong? Report it via our [Bug Report Form](https://forms.gle/PNeCGu1o9XxLoGYE8).
 
 ---
 
