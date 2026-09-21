@@ -65,14 +65,8 @@
                 "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/libraries_intro.ipynb"
             },
             {
-                "icon": "/images/icons/question.svg",
-                "title": "Kahoot: download spreadsheet here",
-                "description": "Spreadsheet for Kahoot questions",
-                "reference": "../resources/files/2025_fall-semester1-kahoot.xlsx"
-            },
-            {
                 "icon": "/images/icons/brain.svg",
-                "title": "Bingo Quiz Python Program",
+                "title": "ML Review Bingo Quiz",
                 "description": "Python program for bingo quiz",
                 "reference": "https://colab.research.google.com/github/bhsmlc/bhsmlc-resources/blob/main/semester2_review.ipynb"
             },
