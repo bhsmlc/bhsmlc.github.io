@@ -11,7 +11,7 @@
 
 main {
     --border-grad-start: var(--primary-color);
-    --border-grad-end: transparent;
+    --border-grad-end: rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
     margin: 2.9rem 0;
     margin-bottom: 7rem;
@@ -120,7 +120,7 @@ main section#resource-list div.resource-category div.category-contents a.resourc
         box-shadow: none;
         animation-timing-function: ease-out;
     }
-    90% {
+    50% {
         --border-grad-start: var(--secondary-color);
         --border-grad-end: var(--primary-color);
         box-shadow: 0 0 3px -1.7px var(--primary-hover);
