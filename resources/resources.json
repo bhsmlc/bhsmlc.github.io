@@ -42,10 +42,11 @@
         "Meeting Slides & Files": [
             {
                 "icon": "/images/icons/notebook-regression.svg",
-                "title": "Linear Regression Notebook",
-                "description": "Notebook from the linear regression meeting",
-                "reference": "https://github.com/bhsmlc/bhsmlc-resources/blob/main/linear_regression.ipynb"
+                "title": "Linear Regression Slides",
+                "description": "Linear regression explanation + activity",
+                "reference": "https://docs.google.com/presentation/d/1n2AXIY1SDNtYj1EcmnkuKGJEnW2Y_bMLLj04utHIQDs/edit?usp=sharing"
             },
+
             {
                 "icon": "/images/icons/tree.svg",
                 "title": "Classifying Trees Slides & Notebook",

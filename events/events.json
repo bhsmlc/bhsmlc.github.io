@@ -1,20 +1,13 @@
 {
     "future": [
         {
-            "title": "Meeting 2: What is Machine Learning?",
-            "date": "Tuesday, September 22 2026",
-            "location": "During Lunch in Room 1325",
-            "content": "Introduce ML and briefly discuss club curriculum.",
-            "references": [
-                "https://docs.google.com/presentation/d/1CmNb7OD8ycfMktBTHskPJQ7SPMK90-cbcHua_eLs4yA/edit?usp=sharing"
-            ]
-        },
-        {
             "title": "Meeting 3: Linear Regression (Closed Form)",
             "date": "Tuesday, September 29 2026",
             "location": "During Lunch in Room 1325",
             "content": "Learn about linear regression and how to implement it.",
-            "references": []
+            "references": [
+                "https://docs.google.com/presentation/d/1n2AXIY1SDNtYj1EcmnkuKGJEnW2Y_bMLLj04utHIQDs/edit?usp=sharing"
+            ]
         },
         {
             "title": "Meeting 4: Linear Regression (Closed Form Visual)",
@@ -188,6 +181,15 @@
             "content": "Quick survey, introductions, and pictionary.",
             "references": [
                 "https://docs.google.com/presentation/d/16u845euy4JojRoaNI6x2mQXnS9qhcBVXqtlxZONWHAg/edit?usp=sharing"
+            ]
+        },
+        {
+            "title": "Meeting 2: What is Machine Learning?",
+            "date": "Tuesday, September 22 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Introduce ML and briefly discuss club curriculum.",
+            "references": [
+                "https://docs.google.com/presentation/d/1CmNb7OD8ycfMktBTHskPJQ7SPMK90-cbcHua_eLs4yA/edit?usp=sharing"
             ]
         }
     ]
