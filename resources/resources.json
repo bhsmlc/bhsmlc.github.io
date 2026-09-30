@@ -42,9 +42,9 @@
         "Meeting Slides & Files": [
             {
                 "icon": "/images/icons/notebook-regression.svg",
-                "title": "Linear Regression Slides",
-                "description": "Linear regression explanation + activity",
-                "reference": "https://docs.google.com/presentation/d/1n2AXIY1SDNtYj1EcmnkuKGJEnW2Y_bMLLj04utHIQDs/edit?usp=sharing"
+                "title": "Linear Regression Interactive Notebook",
+                "description": "Linear regression step-by-step guide",
+                "reference": "https://colab.research.google.com/drive/1llSd9TYsU3E8mnhEExTTbp05g_H7R_TC?usp=sharing"
             },
 
             {

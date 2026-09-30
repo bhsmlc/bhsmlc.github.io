@@ -1,15 +1,6 @@
 {
     "future": [
         {
-            "title": "Meeting 3: Linear Regression (Closed Form)",
-            "date": "Tuesday, September 29 2026",
-            "location": "During Lunch in Room 1325",
-            "content": "Learn about linear regression and how to implement it.",
-            "references": [
-                "https://docs.google.com/presentation/d/1n2AXIY1SDNtYj1EcmnkuKGJEnW2Y_bMLLj04utHIQDs/edit?usp=sharing"
-            ]
-        },
-        {
             "title": "Meeting 4: Linear Regression (Closed Form Visual)",
             "date": "Tuesday, October 6 2026",
             "location": "During Lunch in Room 1325",
@@ -190,6 +181,16 @@
             "content": "Introduce ML and briefly discuss club curriculum.",
             "references": [
                 "https://docs.google.com/presentation/d/1CmNb7OD8ycfMktBTHskPJQ7SPMK90-cbcHua_eLs4yA/edit?usp=sharing"
+            ]
+        },
+        {
+            "title": "Meeting 3: Linear Regression (Closed Form)",
+            "date": "Tuesday, September 29 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Learn about linear regression and how to implement it.",
+            "references": [
+                "https://docs.google.com/presentation/d/1n2AXIY1SDNtYj1EcmnkuKGJEnW2Y_bMLLj04utHIQDs/edit?usp=sharing",
+                "https://colab.research.google.com/drive/1llSd9TYsU3E8mnhEExTTbp05g_H7R_TC?usp=sharing"
             ]
         }
     ]
