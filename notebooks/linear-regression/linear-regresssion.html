@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>linear-regression.ipynb</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: #ffffff;
+      color: #222;
+      font-size: 16px;
+    }
+    .cell {
+      margin-bottom: 24px;
+    }
+    .markdown-content h1 {
+      font-size: 2.2em;
+      font-weight: 600;
+      margin: 1.2em 0 0.6em 0;
+      color: #000;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3em;
+    }
+    .markdown-content h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+      margin: 1em 0 0.5em 0;
+      color: #111;
+    }
+    .markdown-content h3 {
+      font-size: 1.4em;
+      font-weight: 600;
+      margin: 0.9em 0 0.4em 0;
+      color: #222;
+    }
+    .markdown-content p {
+      margin: 0.9em 0;
+      text-align: justify;
+    }
+    .markdown-content code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.9em;
+      color: #c7254e;
+    }
+    .markdown-content strong {
+      font-weight: 600;
+      color: #000;
+    }
+    .markdown-content em {
+      font-style: italic;
+    }
+    .code-block {
+      background: #f8f8f8;
+      padding: 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      border-left: 3px solid #ddd;
+      overflow-x: auto;
+    }
+    .code-block pre {
+      margin: 0;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+      white-space: pre;
+    }
+    .output-text {
+      background: #fafafa;
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 4px;
+      border-left: 3px solid #4CAF50;
+      font-family: 'SFMono-Regular', Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .output-error {
+      border-left-color: #f44336;
+      background: #fff5f5;
+      color: #c62828;
+    }
+    .plot-output {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .plot-output img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+    }
+    .footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #555;
+    }
+    @media print {
+      body {
+        max-width: 100%;
+        padding: 20px;
+      }
+      .cell {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cell markdown-content">
+<p><h1>Linear Regression</h1><br>Run each code block step by step to understand linear regression :D</p>  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Importing Libraries</h2></p>
+<p><code>matplotlib</code> used to visiualize our line and scatter plot</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>import matplotlib</pre>
+    </div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Defining our dataset</h2></p>
+<p>Let's use Python arrays to store our data</p>
+<p><code>data_x</code> represents the x values of the points, which is the temperature in Fahrenheit<br><code>data_y</code> represents the y values of the points, which is the amount of iced coffee sold in gallons</p>
+<p><code>(data_x[i], data_y[i])</code> are the coordinates of point i</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>x_data = [70, 80, 75, 90, 65, 85]
+y_data = [5.0, 8.2, 6.5, 11.5, 4.0, 10.0]
+
+print(x_data)
+print(y_data)
+</pre>
+    </div>
+    <div class="output-text">[70, 80, 75, 90, 65, 85]
+[5.0, 8.2, 6.5, 11.5, 4.0, 10.0]
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Keep in mind the formulas to find the mean and the y intercept</h2><br>[Clickable Text] (https://docs.google.com/presentation/d/1n2AXIY1SDNtYj1EcmnkuKGJEnW2Y_bMLLj04utHIQDs/edit?slide=id.h5720983e73b472cd_1_307#slide=id.h5720983e73b472cd_1_307)<br></p>  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Summing our data</h2></p>
+<p>The closed form formula for calculating the slope of the line of best fit involves finding the mean of the data. </p>
+<p>In order to find the mean, we must first find the sum. You can either do this with a built-in function or with an explicit way.</p>  </div>
+
+  <div class="cell markdown-content">
+<p><h3>Explicit Way</h3></p>
+<p>Using a for loop</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>x_sum = 0
+for num in x_data:
+  x_sum += num
+y_sum = 0
+for num in y_data:
+  y_sum += num
+
+print(x_sum)
+print(y_sum)</pre>
+    </div>
+    <div class="output-text">465
+45.2
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h3>Using a built-in funciton</h3><br>You can also simply use the <code>sum()</code> function</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>x_sum = sum(x_data)
+y_sum = sum(y_data)
+
+print(x_sum)
+print(y_sum)</pre>
+    </div>
+    <div class="output-text">465
+45.2
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Finding the mean</h2></p>
+<p>mean is the sum / length</p>
+<p>To get the length of our data, we would use the <code>len()</code> function</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>x_length = len(x_data)
+y_length = len(y_data)
+
+x_mean = x_sum / x_length
+y_mean = y_sum / y_length
+
+print(x_mean)
+print(y_mean)</pre>
+    </div>
+    <div class="output-text">77.5
+7.533333333333334
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Finding the slope of our line of best fit</h2></p>
+<p>Now that we have the necessary information, we can translate our math formula into code. The sigma would turn into a for loop.</p>
+<p>Let's do this in 2 steps.</p>
+<p>1. Finding the "rise," which is the numerator of the formula</p>
+<p>2. Finding the "run," which is the denominator</p>  </div>
+
+  <div class="cell markdown-content">
+<p><h3>Finding the "rise"</h3></p>
+<p>Translating the below code to English, we are looking at each data point, and multiplying the x displacement from mean to the y displacement from mean and summing all those products.</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>length = len(x_data)
+rise = 0
+for i in range(length):
+  rise += (x_mean - x_data[i]) * (y_mean - y_data[i])</pre>
+    </div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h3>Finding the "run"</h3></p>
+<p>Translating the below code to English, we find the squared error from each x value to the x mean and we sum the errors.</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>length = len(x_data)
+run = 0
+for i in range(length):
+  run += (x_mean - x_data[i])**2</pre>
+    </div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h3>Calculate slope (m) with rise/run</h3></p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>m = rise / run
+print(m)</pre>
+    </div>
+    <div class="output-text">0.3097142857142857
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Find the y-intercept using the slope</h2></p>
+<p>We'll use the formula</p>
+<p>y_mean = m*x_mean+b</p>
+<p>which rearranges to<br>b = y_mean - m*x_mean</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>b = y_mean - m*x_mean
+print(b)</pre>
+    </div>
+    <div class="output-text">-16.469523809523807
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Create the function of the line of best fit</h2></p>
+<p>This will allow you to input an x value and get a predicted y value</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>def f(x):
+  x = min(120, x) # any temperature over 120 is unrealistic so it will be taken as 120
+  prediction = m*x+b
+  return max(0, prediction) # you can't sell negative coffee
+
+print("f(x) = "+str(m)+"x"+" + "+str(b))</pre>
+    </div>
+    <div class="output-text">f(x) = 0.3097142857142857x + -16.469523809523807
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Make some predictions</h2></p>
+<p>Now that we have out function, we can make some predictions with it</p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>print(f(2)) # Prediction of gollons of coffee sold in 2 degrees F
+print(f(20)) # Prediction of gollons of coffee sold in 20 degrees F
+print(f(80)) # Prediction of gollons of coffee sold in 80 degrees F
+print(f(90)) # Prediction of gollons of coffee sold in 90 degrees F
+print(f(105)) # Prediction of gollons of coffee sold in 105 degrees F
+
+</pre>
+    </div>
+    <div class="output-text">0
+0
+8.307619047619049
+11.404761904761909
+16.050476190476196
+</div>
+  </div>
+
+  <div class="cell markdown-content">
+<p><h2>Visualizing our model</h2></p>
+<p>This might be the best part of this activity.</p>
+<p>We can use the Python library <code>matplotlib</code> to plot our data, our line, and predictions. We will mainly be using <code>matplotlib</code>'s submodule <code>pyplot</code> to visualize our data.  </p>
+<p><code>plt.plot()</code></p>
+<p>args:</p>
+<p>[]: x-values<br>[]: y-values<br>str (optional): color   </p>
+<p>returns:</p>
+<p>Plots a continous line between each data point</p>
+<p><code>plt.scatter()</code></p>
+<p>args:</p>
+<p>[]: x-values<br>[]: y-values<br>str (optional): color</p>
+<p>returns:</p>
+<p>Plots discrete points on the graph</p>
+<p><code>plt.show()</code></p>
+<p>args:</p>
+<p>none</p>
+<p>returns:</p>
+<p>Shows the graph with everything plotted on it<br></p>  </div>
+
+  <div class="cell">
+    <div class="code-block">
+      <pre>import matplotlib.pyplot as plt # Think of this as borrowing someone else's code and referring to their code by starting with "plt."
+plt.plot([0, 53, 120], [f(0), f(53), f(120)], color="red")
+plt.scatter(x_data, y_data, color="white")
+plt.scatter([2, 20, 80, 90, 105], [f(2), f(20), f(80), f(90), f(105)], color="blue")
+
+plt.show()</pre>
+    </div>
+    <div class="plot-output">
+      <img src="data:image/png;base64,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" alt="Plot output" />
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Generated from notebook.ipynb</p>
+    <p>Created with <a href="https://pythoncompiler.io" target="_blank">PythonCompiler</a></p>
+  </div>
+  <script src="js/load_component.js"></script>
+    <script defer>
+        loadComponent("nav", "/includes/navbar.html");
+        loadComponent("footer", "/includes/footer.html");
+    </script>
+</body>
+</html>
