@@ -34,9 +34,24 @@ footer div#social-links a#github img {
 footer div#social-links a#remind img {
     width: 120%;
 }
-
-
+footer div#social-links a#discord img {
+    width: 100%;
+}
 
 footer small {
     font-weight: 400;
+}
+
+@media (width <= 480px) {
+    footer {
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+    footer div#social-links {
+        gap: 0.75rem;
+    }
+    footer small {
+        font-size: 0.85rem;
+        text-align: center;
+    }
 }

@@ -10,6 +10,10 @@
         <meta name="author" content="Burbank High School Machine Learning Club">
         <meta name="keywords" content="Burbank High School, BHS, Burbank High clubs, Machine Learning Club, AI Club, ML Club">
 
+        <script>
+        (function(){try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(_){}})();
+        </script>
+
         <link rel="icon" href="/images/dark_logo.svg" type="image/svg+xml">
 
         <link rel="stylesheet" href="/css/style.css">
@@ -17,35 +21,10 @@
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/contact-form.css">
         <link rel="stylesheet" href="/css/hero.css">
-        
+
         <title>Contact - BHS ML Club</title>
 
-        <style>
-            header nav ul li a#contact-link {
-                color: var(--secondary-color);
-                transition: all 0.2s ease 0s;
-            }
-            header nav ul li a#contact-link::after {
-                content: "";
-                position: absolute;
-                display: block;
-                left: 50%;
-                top: 125%;
-                height: 0.2rem;
-                width: 0;
-                background-color: var(--secondary-color);
-                left: 0;
-                width: 100%;
-                transition: all 0.1s ease 0s;
-            }
-            header nav ul li a#contact-link:hover {
-                color: var(--secondary-dark);
-            }
-            header nav ul li a#contact-link:hover::after {
-                background-color: var(--secondary-dark);
-            }
-        </style>
-    </head>
+        </head>
     <body>
         <header>
             <nav>
@@ -91,6 +70,8 @@
             loadComponent("footer", "/includes/footer.html");
             loadComponent("nav", "/includes/navbar.html");
         </script>
+        <script src="/js/theme.js"></script>
+        <script src="/js/nav.js"></script>
         <script
             type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -98,4 +79,4 @@
         <script src="/js/contact_form.js" defer>
         </script>
     </body>
-</html> 
+</html>

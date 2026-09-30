@@ -10,42 +10,21 @@
         <meta name="author" content="Burbank High School Machine Learning Club">
         <meta name="keywords" content="Burbank High School, BHS, Burbank High clubs, Machine Learning Club, AI Club, ML Club">
 
+        <script>
+        (function(){try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);}catch(_){}})();
+        </script>
+
         <link rel="icon" href="/images/dark_logo.svg" type="image/svg+xml">
 
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/navbar.css">
         <link rel="stylesheet" href="/css/footer.css">
-        <link rel="stylesheet" href="/css/timeline.css">
+        <link rel="stylesheet" href="/css/resources.css">
         <link rel="stylesheet" href="/css/hero.css">
-        
-        <title>Events - BHS ML Club</title>
 
-        <style>
-            header nav ul li a#events-link {
-                color: var(--secondary-color);
-                transition: all 0.2s ease 0s;
-            }
-            header nav ul li a#events-link::after {
-                content: "";
-                position: absolute;
-                display: block;
-                left: 50%;
-                top: 125%;
-                height: 0.2rem;
-                width: 0;
-                background-color: var(--secondary-color);
-                left: 0;
-                width: 100%;
-                transition: all 0.1s ease 0s;
-            }
-            header nav ul li a#events-link:hover {
-                color: var(--secondary-dark);
-            }
-            header nav ul li a#events-link:hover::after {
-                background-color: var(--secondary-dark);
-            }
-        </style>
-    </head>
+        <title>Resources - BHS ML Club</title>
+
+        </head>
     <body>
         <header>
             <nav>
@@ -55,24 +34,21 @@
                 <div id="hero-content" style="height: 25rem; animation: none;">
                     <hgroup>
                         <h1>
-                            <div id="header-line2">Meetings and Events</div>
+                            <div id="header-line2">Tools and Resources</div>
                         </h1>
-                        <div id="hero-tagline">Stay up to date with future events</div>
+                        <div id="hero-tagline">Find learning tools, documentations, meetings slides, and more.</div>
                     </hgroup>
                 </div>
             </section>
         </header>
         <main>
-            <h3>Events</h3>
+            <h3>Resources</h3>
+            <section id="highlights">
 
-            <div id="events-list">
-                <div id="past-events">
-                    
-                </div>
-                <div id="future-events">
-                    <div id="timeline"></div>
-                </div>
-            </div>
+            </section>
+            <section id="resource-list">
+
+            </section>
         </main>
         <footer>
             <!--Loaded from load_component.js-->
@@ -84,7 +60,9 @@
             loadComponent("footer", "/includes/footer.html");
             loadComponent("nav", "/includes/navbar.html");
         </script>
-        <script src="/js/load_events.js" defer>
+        <script src="/js/theme.js"></script>
+        <script src="/js/nav.js"></script>
+        <script src="/js/load_resources.js">
         </script>
     </body>
-</html> 
+</html>

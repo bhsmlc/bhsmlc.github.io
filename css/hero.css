@@ -21,11 +21,16 @@ header section#hero div#hero-content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50rem;
+    height: 25rem;
     margin: 0 auto;
     overflow-anchor: none;
 
     animation: slide-up 1.2s ease-out;
+}
+#hero-content.hero-full {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 @keyframes slide-up {
     from {
@@ -84,7 +89,7 @@ header section#hero div#hero-content hgroup div#hero-tagline {
     gap: 0.6rem;
     font-size: 1.6rem;
     text-align: center;
-    color: var(--primary-hovor);
+    color: var(--primary-color);
     margin-top: 0.5rem;
 }
 
@@ -156,13 +161,13 @@ header section#hero div#hero-content section#button-row > * {
     box-shadow: none;
 }
 header section#hero div#hero-content section#button-row a#join-hero-button {
-    color: var(--background-color);
+    color: var(--on-secondary-color);
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
     transition: all 0.15s ease-in 0s;
 }
 header section#hero div#hero-content section#button-row a#join-hero-button:hover {
-    color: var(--background-color);
+    color: var(--on-secondary-color);
     background-color: var(--secondary-dark);
     border-color: var(--secondary-dark);
     transform: translateY(-0.1rem);
@@ -184,4 +189,32 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+html[data-theme="dark"] header section#hero div#hero-content img {
+    content: url("/images/dark_logo.svg");
+}
+
+@media (width <= 480px) {
+    #hero-content.hero-full {
+        padding: 5rem 1rem 3rem;
+    }
+    header section#hero div#hero-content img {
+        width: 10rem;
+    }
+    header section#hero div#hero-content hgroup h1 div#header-line1 {
+        font-size: 1.4rem;
+    }
+    header section#hero div#hero-content hgroup h1 div#header-line2 {
+        font-size: 1.7rem;
+    }
+    header section#hero div#hero-content hgroup div#hero-tagline {
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+    }
+    header section#hero div#hero-content section#button-row > * {
+        width: 12rem;
+        height: 3.5rem;
+        font-size: 0.9rem;
+    }
 }
