@@ -1,17 +1,17 @@
 {
     "future": [
         {
-            "title": "Meeting 4: Linear Regression (Closed Form Visual)",
+            "title": "Meeting 4: Linear Regression & Turtle",
             "date": "Tuesday, October 6 2026",
             "location": "During Lunch in Room 1325",
-            "content": "Visualize our line and data from last meeting's linear regression activity.",
+            "content": "Visualize our line and data from last meeting and practice with Python Turtle.",
             "references": ["https://pythonandturtle.com"]
         },
         {
             "title": "Meeting 5: Classification Trees",
             "date": "Tuesday, October 13 2026",
             "location": "During Lunch in Room 1325",
-            "content": "Learn about classificaiton trees and implement them.",
+            "content": "Learn about classification trees and implement them.",
             "references": []
         }
     ],
