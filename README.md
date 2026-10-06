@@ -7,7 +7,6 @@ View the site here: [bhsmachinelearning.com](https://bhsmachinelearning.com)
 ---
 
 ## Tech Stack
-**v2** is currently **frontend-only**. A backend implementation is planned for **v3**.
 
 * **Languages:** HTML, CSS, JavaScript
 * **Design Tools:** Figma
