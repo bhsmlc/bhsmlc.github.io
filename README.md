@@ -2,7 +2,7 @@
 
 A modern, responsive website for the BHS ML Club to manage events, access resources, and make connections.
 
-View the site here: [bhsmlc.github.io](https://bhsmlc.github.io)
+View the site here: [bhsmachinelearning.com](https://bhsmachinelearning.com)
 
 ---
 
