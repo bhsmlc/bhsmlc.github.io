@@ -1,13 +1,6 @@
 {
     "future": [
         {
-            "title": "Meeting 5: Python Basics",
-            "date": "Tuesday, October 13 2026",
-            "location": "During Lunch in Room 1325",
-            "content": "Learn Python and practice basic programming concepts.",
-            "references": []
-        },
-        {
             "title": "Meeting 6: Classification Trees",
             "date": "Tuesday, October 20 2026",
             "location": "During Lunch in Room 1325",
@@ -222,11 +215,14 @@
             "references": ["https://docs.google.com/presentation/d/15ovBW9rq5s07n_3TIutWZDR7XlH5kQeuL5BUB2wj91A/edit?usp=sharing", "https://pythonandturtle.com"]
         },
         {
-            "title": "Meeting 4: Linear Regression & Turtle",
-            "date": "Tuesday, October 6 2026",
+            "title": "Meeting 5: Python Basics",
+            "date": "Tuesday, October 13 2026",
             "location": "During Lunch in Room 1325",
-            "content": "Visualize our line and data from last meeting and practice with Python Turtle.",
-            "references": ["https://docs.google.com/presentation/d/15ovBW9rq5s07n_3TIutWZDR7XlH5kQeuL5BUB2wj91A/edit?usp=sharing", "https://pythonandturtle.com"]
+            "content": "Learn Python and practice basic programming concepts.",
+            "references": [
+                "https://docs.google.com/presentation/d/1A0p4QmtlfbJuAdRNZwuau5a5PRaaTvXYbijor60aVyc/edit?usp=sharing",
+                "https://github.com/bhsmlc/bhsmlc-resources/blob/main/python_basics_ml.ipynb"
+            ]
         }
     ]
 }
