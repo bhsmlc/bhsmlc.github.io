@@ -1,13 +1,6 @@
 {
     "future": [
         {
-            "title": "Meeting 6: Classification Trees",
-            "date": "Tuesday, October 20 2026",
-            "location": "During Lunch in Room 1325",
-            "content": "Learn about classification trees and implement them.",
-            "references": []
-        },
-        {
             "title": "Meeting 7: Intro to ML Libraries",
             "date": "Tuesday, October 27 2026",
             "location": "During Lunch in Room 1325",
@@ -222,6 +215,16 @@
             "references": [
                 "https://docs.google.com/presentation/d/1A0p4QmtlfbJuAdRNZwuau5a5PRaaTvXYbijor60aVyc/edit?usp=sharing",
                 "https://github.com/bhsmlc/bhsmlc-resources/blob/main/python_basics_ml.ipynb"
+            ]
+        },
+        {
+            "title": "Meeting 6: Classification Trees",
+            "date": "Tuesday, October 20 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Learn about classification trees and implement them.",
+            "references": [
+                "https://colab.research.google.com/drive/1j9jF2oQh_ssX1N3Ba1eo1Gb_87BDp98p?usp=sharing",
+                "https://colab.research.google.com/drive/1oAKZN5-8nDfwhkNElXrZppQKJikRd5o9?usp=sharing"
             ]
         }
     ]
