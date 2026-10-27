@@ -1,13 +1,6 @@
 {
     "future": [
         {
-            "title": "Meeting 7: Intro to ML Libraries",
-            "date": "Tuesday, October 27 2026",
-            "location": "During Lunch in Room 1325",
-            "content": "Learn about popular ML libraries in Python and how to use them.",
-            "references": []
-        },
-        {
             "title": "Meeting 8: Decide on a Project Idea",
             "date": "Tuesday, November 3 2026",
             "location": "During Lunch in Room 1325",
@@ -226,6 +219,16 @@
                 "https://colab.research.google.com/drive/1j9jF2oQh_ssX1N3Ba1eo1Gb_87BDp98p?usp=sharing",
                 "https://colab.research.google.com/drive/1oAKZN5-8nDfwhkNElXrZppQKJikRd5o9?usp=sharing",
                 "https://docs.google.com/presentation/d/1u7gazYsmfcsurjK3BUOREVUxdWMw9KZW/edit?usp=sharing&ouid=110433332505431120510&rtpof=true&sd=true"
+            ]
+        },
+        {
+            "title": "Meeting 7: Python Pictionary",
+            "date": "Tuesday, October 27 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Play a game of Python Pictionary to reinforce Python concepts.",
+            "references": [
+                "https://colab.research.google.com/drive/1oAKZN5-8nDfwhkNElXrZppQKJikRd5o9?usp=sharing",
+                "https://docs.google.com/presentation/d/1u7gazYsmfcsurjK3BUOREVUxdWMw9KZW/edit?usp=sharing&ouid=110433332505431120510&rtpof=true&sd=true" 
             ]
         }
     ]
