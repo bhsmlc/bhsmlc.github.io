@@ -1,17 +1,10 @@
 {
     "future": [
         {
-            "title": "Meeting 8: Decide on a Project Idea",
-            "date": "Tuesday, November 3 2026",
-            "location": "During Lunch in Room 1325",
-            "content": "Discuss and decide on a project idea for this semester.",
-            "references": []
-        },
-        {
-            "title": "Meeting 9: Start Project and Assign Tasks",
+            "title": "Meeting 9: Plan Project and Assign Tasks",
             "date": "Tuesday, November 10 2026",
             "location": "During Lunch in Room 1325",
-            "content": "Start working on the project and assign tasks to team members.",
+            "content": "Plan project and assign tasks to team members.",
             "references": []
         }
     ],
@@ -228,6 +221,15 @@
             "content": "Play a game of Python Pictionary to reinforce Python concepts.",
             "references": [
                 "https://docs.google.com/presentation/d/1NHpnE14lP_T_a3StAJ3aYJRZevn7k6xG/edit?usp=sharing&ouid=110433332505431120510&rtpof=true&sd=true" 
+            ]
+        },
+        {
+            "title": "Meeting 8: Building a Project Overview & Discussion",
+            "date": "Tuesday, November 3 2026",
+            "location": "During Lunch in Room 1325",
+            "content": "Details about our semester project + discussing and submitting project ideas.",
+            "references": [
+                "https://docs.google.com/presentation/d/1J_KRqIak87DekblYGNTEjj1DorS2rmzwVX-m_PqB4dA/edit?usp=sharing"
             ]
         }
     ]
